@@ -3,9 +3,8 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   return (
@@ -15,23 +14,11 @@ export function Hero() {
 
       <div className="container mx-auto relative">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center"
-          >
-            <Badge dot>
-              <Sparkles className="h-3 w-3 text-accent" />
-              <span>AI Engineering Studio · 株式会社ゼンラボ</span>
-            </Badge>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.05 }}
-            className="mt-7 text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.02em] heading-gradient text-balance"
+            transition={{ duration: 0.6 }}
+            className="text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.02em] heading-gradient text-balance"
           >
             業務に溶け込む、
             <br className="hidden sm:inline" />
@@ -41,7 +28,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.12 }}
+            transition={{ duration: 0.6, delay: 0.08 }}
             className="mt-7 text-[15.5px] sm:text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
             ご要望と既存の業務フローをヒアリングし、
@@ -52,7 +39,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.18 }}
+            transition={{ duration: 0.6, delay: 0.16 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
             <Button asChild size="lg">
@@ -61,15 +48,12 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="#approach">強みを見る</Link>
-            </Button>
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.24 }}
             className="mt-7 text-xs text-muted-foreground/80"
           >
             初回ヒアリング 30〜60分・無料 / 準委任契約のみ / NDA対応

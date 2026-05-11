@@ -3,11 +3,12 @@ import { Logo } from "@/components/logo";
 import { SITE } from "@/lib/site";
 
 const sections = [
-  { href: "#approach", label: "Approach" },
-  { href: "#process", label: "Process" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "#approach", label: "強み" },
+  { href: "#process", label: "進め方" },
+  { href: "#pricing", label: "料金と契約" },
+  { href: "#company", label: "会社概要" },
+  { href: "#representative", label: "代表紹介" },
+  { href: "#contact", label: "お問い合わせ" },
 ];
 
 const company = [
@@ -45,8 +46,8 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground/80 mb-4">
-              Sections
+            <h4 className="text-xs font-medium tracking-[0.14em] text-muted-foreground/80 mb-4">
+              ページ
             </h4>
             <ul className="space-y-2.5">
               {sections.map((l) => (
@@ -63,8 +64,8 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground/80 mb-4">
-              Company
+            <h4 className="text-xs font-medium tracking-[0.14em] text-muted-foreground/80 mb-4">
+              会社情報
             </h4>
             <dl className="space-y-2.5 text-sm">
               {company.map((c) => (
@@ -79,8 +80,8 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground/80 mb-4">
-              Contact
+            <h4 className="text-xs font-medium tracking-[0.14em] text-muted-foreground/80 mb-4">
+              お問い合わせ
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>

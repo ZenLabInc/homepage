@@ -39,7 +39,7 @@ const items = [
 
 const facts = [
   { label: "契約形態", value: "準委任のみ" },
-  { label: "請求", value: "エンジニア工数 + 必要交通費 のみ" },
+  { label: "請求", value: "エンジニア工数 + 必要経費 のみ" },
   { label: "初回ヒアリング", value: "30〜60分 / 無料" },
   { label: "引き継ぎ", value: "ドキュメント納品 + 勉強会(任意)" },
 ];
@@ -52,7 +52,7 @@ export function Pricing() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="Pricing & Contract"
+          eyebrow="料金と契約"
           title={
             <>
               <span className="accent-gradient">工数のみ</span>で請求、

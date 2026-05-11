@@ -62,7 +62,7 @@ export function Process() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="Process"
+          eyebrow="進め方"
           title={
             <>
               5つのステップで、

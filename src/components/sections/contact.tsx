@@ -62,7 +62,7 @@ export function Contact() {
             >
               <span className="inline-flex items-center gap-2">
                 <span className="h-px w-6 bg-foreground/30" />
-                Get started
+                お問い合わせ
               </span>
             </motion.div>
             <h2 className="mt-4 text-[clamp(1.85rem,3.4vw,2.85rem)] font-semibold leading-[1.15] tracking-tight heading-gradient text-balance">

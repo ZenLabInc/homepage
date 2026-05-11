@@ -40,12 +40,12 @@ export function Approach() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="Approach"
+          eyebrow="強み"
           title={
             <>
               <span className="accent-gradient">業務で確実に使えるAI</span>
               <br className="hidden sm:inline" />
-              システムを、構造的に作る。
+              システムを、素早く作る。
             </>
           }
           description="ZenLabの強みは、業務で確実に使えるAIシステムを構築できることです。「速さ × 何度もの改善」を組み合わせた開発アプローチで、現場で動くものを作ります。"
