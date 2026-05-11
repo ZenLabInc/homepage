@@ -9,14 +9,15 @@ export function Badge({ className, dot, children, ...props }: BadgeProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-border bg-background/40 backdrop-blur-sm px-3.5 py-1 text-xs font-medium text-muted-foreground",
+        "inline-flex items-center gap-2 rounded-full border border-border bg-white px-3.5 py-1 text-xs font-medium text-muted-foreground",
+        "shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]",
         className
       )}
       {...props}
     >
       {dot && (
         <span className="relative flex h-1.5 w-1.5">
-          <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 animate-ping" />
+          <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
           <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
         </span>
       )}

@@ -88,10 +88,10 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="group relative bg-background p-8 transition-colors hover:bg-card/60"
+              className="group relative bg-white p-8 transition-colors hover:bg-muted/40"
             >
               <div className="flex items-start justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-foreground/[0.03] text-foreground">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-muted text-foreground">
                   <s.icon className="h-[18px] w-[18px]" />
                 </div>
                 <ArrowUpRight className="h-4 w-4 text-muted-foreground/60 transition-all duration-300 group-hover:text-foreground group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -103,8 +103,8 @@ export function Services() {
                 {s.desc}
               </p>
 
-              <div className="mt-6 pt-5 border-t border-border/70">
-                <div className="text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground/70">
+              <div className="mt-6 pt-5 border-t border-border">
+                <div className="text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground/80">
                   Expected impact
                 </div>
                 <div className="mt-1 text-[13.5px] font-medium text-foreground">
@@ -116,7 +116,7 @@ export function Services() {
                 {s.deliverables.map((d) => (
                   <li
                     key={d}
-                    className="text-[11px] px-2 py-0.5 rounded-md border border-border/70 bg-background/60 text-muted-foreground"
+                    className="text-[11px] px-2 py-0.5 rounded-md border border-border bg-muted text-muted-foreground"
                   >
                     {d}
                   </li>

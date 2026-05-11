@@ -88,19 +88,19 @@ export function Process() {
                 className="relative"
               >
                 {/* node */}
-                <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background z-10">
-                  <s.icon className="h-[16px] w-[16px] text-foreground/85" />
+                <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] z-10">
+                  <s.icon className="h-[16px] w-[16px] text-foreground" />
                   <span className="absolute -bottom-1.5 -right-1.5 rounded-md bg-foreground text-background text-[10px] font-mono font-medium px-1.5 py-0.5">
                     {s.no}
                   </span>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-border bg-card/30 p-5 h-full">
+                <div className="mt-6 rounded-2xl border border-border bg-white p-5 h-full shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]">
                   <div className="flex items-baseline justify-between">
                     <h3 className="text-[15px] font-semibold tracking-tight">
                       {s.title}
                     </h3>
-                    <span className="text-[10.5px] font-mono text-muted-foreground/80">
+                    <span className="text-[10.5px] font-mono text-muted-foreground">
                       {s.duration}
                     </span>
                   </div>

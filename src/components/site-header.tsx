@@ -32,7 +32,7 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-border/60 bg-background/70 backdrop-blur-xl"
+          ? "border-b border-border bg-white/85 backdrop-blur-xl shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
           : "border-b border-transparent"
       )}
     >
@@ -87,7 +87,7 @@ export function SiteHeader() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-border/60 bg-background/95 backdrop-blur-xl"
+            className="md:hidden border-t border-border bg-white/98 backdrop-blur-xl"
           >
             <div className="container mx-auto py-4 flex flex-col gap-1">
               {nav.map((item) => (

@@ -8,8 +8,7 @@ interface LogoProps {
 
 /**
  * ZenLab brand mark.
- * A single-stroke "Z" inscribed in an ensō-like circle —
- * suggesting Zen calm + a closed, autonomous loop.
+ * Charcoal Z for authority + indigo ensō ring for "quiet, autonomous loop".
  */
 export function Logo({ className, size = 28, withWordmark = false }: LogoProps) {
   return (
@@ -23,29 +22,36 @@ export function Logo({ className, size = 28, withWordmark = false }: LogoProps) 
         aria-hidden
       >
         <defs>
-          <linearGradient id="zl-stroke" x1="6" y1="6" x2="26" y2="26" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stopColor="#cbd5ff" />
-            <stop offset="1" stopColor="#9b87ff" />
+          <linearGradient
+            id="zl-ring"
+            x1="6"
+            y1="6"
+            x2="26"
+            y2="26"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#4f46e5" />
+            <stop offset="1" stopColor="#6366f1" />
           </linearGradient>
         </defs>
-        {/* ensō ring — slightly broken to evoke a single brushstroke */}
+        {/* ensō ring — accent indigo */}
         <path
           d="M16 4.5 A11.5 11.5 0 1 1 6.5 21.6"
-          stroke="url(#zl-stroke)"
+          stroke="url(#zl-ring)"
           strokeWidth="1.6"
           strokeLinecap="round"
-          opacity="0.85"
+          opacity="0.95"
         />
-        {/* Z stroke */}
+        {/* Z stroke — solid charcoal for authority */}
         <path
           d="M11 11.5 H21 L11 20.5 H21"
-          stroke="url(#zl-stroke)"
+          stroke="#0f172a"
           strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         {/* presence dot — autonomous agent */}
-        <circle cx="22.5" cy="20.5" r="1.4" fill="url(#zl-stroke)" />
+        <circle cx="22.5" cy="20.5" r="1.4" fill="url(#zl-ring)" />
       </svg>
       {withWordmark && (
         <span className="font-semibold tracking-tight text-foreground text-[15px]">

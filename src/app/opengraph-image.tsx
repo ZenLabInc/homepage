@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ZenLab — Quiet AI for real work.";
+export const alt = "ZenLab — 業務に溶け込む、自律するAIを。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,8 +12,8 @@ export default async function OG() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#08080a",
-          color: "#fafafa",
+          background: "#ffffff",
+          color: "#0f172a",
           display: "flex",
           flexDirection: "column",
           padding: 80,
@@ -21,18 +21,18 @@ export default async function OG() {
           fontFamily: "Inter, system-ui, sans-serif",
         }}
       >
-        {/* Grid */}
+        {/* Subtle grid */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
+              "linear-gradient(to right, rgba(15,23,42,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.05) 1px, transparent 1px)",
             backgroundSize: "56px 56px",
             display: "flex",
           }}
         />
-        {/* Glow */}
+        {/* Soft indigo glow */}
         <div
           style={{
             position: "absolute",
@@ -41,19 +41,19 @@ export default async function OG() {
             width: 900,
             height: 900,
             background:
-              "radial-gradient(circle, rgba(155,135,255,0.22) 0%, transparent 60%)",
+              "radial-gradient(circle, rgba(79,70,229,0.10) 0%, transparent 60%)",
             display: "flex",
           }}
         />
         <div
           style={{
             position: "absolute",
-            bottom: -260,
+            bottom: -280,
             right: -120,
             width: 700,
             height: 700,
             background:
-              "radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 65%)",
             display: "flex",
           }}
         />
@@ -72,8 +72,9 @@ export default async function OG() {
               width: 52,
               height: 52,
               borderRadius: 12,
-              background: "#0e0e12",
-              border: "1px solid rgba(255,255,255,0.1)",
+              background: "#ffffff",
+              border: "1px solid #e5e7eb",
+              boxShadow: "0 1px 2px rgba(15,23,42,0.04)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -89,8 +90,8 @@ export default async function OG() {
                   y2="26"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stopColor="#cbd5ff" />
-                  <stop offset="1" stopColor="#9b87ff" />
+                  <stop offset="0" stopColor="#4f46e5" />
+                  <stop offset="1" stopColor="#6366f1" />
                 </linearGradient>
               </defs>
               <path
@@ -99,17 +100,17 @@ export default async function OG() {
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 fill="none"
-                opacity="0.85"
+                opacity="0.95"
               />
               <path
                 d="M11 11.5 H21 L11 20.5 H21"
-                stroke="url(#ogg)"
+                stroke="#0f172a"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
               />
-              <circle cx="22.5" cy="20.5" r="1.6" fill="#cbd5ff" />
+              <circle cx="22.5" cy="20.5" r="1.6" fill="#4f46e5" />
             </svg>
           </div>
           <div
@@ -117,6 +118,7 @@ export default async function OG() {
               fontSize: 30,
               fontWeight: 600,
               letterSpacing: -0.5,
+              color: "#0f172a",
               display: "flex",
             }}
           >
@@ -135,14 +137,11 @@ export default async function OG() {
         >
           <div
             style={{
-              fontSize: 92,
+              fontSize: 86,
               fontWeight: 700,
               letterSpacing: -3,
               lineHeight: 1.05,
-              backgroundImage:
-                "linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.7) 100%)",
-              backgroundClip: "text",
-              color: "transparent",
+              color: "#0f172a",
               display: "flex",
               flexDirection: "column",
             }}
@@ -152,10 +151,10 @@ export default async function OG() {
           </div>
           <div
             style={{
-              fontSize: 26,
+              fontSize: 24,
               fontWeight: 400,
-              color: "#a1a1aa",
-              marginTop: 28,
+              color: "#475569",
+              marginTop: 26,
               display: "flex",
               gap: 14,
               alignItems: "center",
@@ -167,14 +166,13 @@ export default async function OG() {
           </div>
         </div>
 
-        {/* bottom-right URL */}
         <div
           style={{
             position: "absolute",
             bottom: 56,
             right: 80,
             fontSize: 20,
-            color: "#a1a1aa",
+            color: "#64748b",
             display: "flex",
             zIndex: 1,
           }}

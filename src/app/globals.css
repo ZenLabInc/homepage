@@ -4,17 +4,20 @@
 
 @layer base {
   :root {
-    --background: 240 8% 4%;
-    --foreground: 0 0% 98%;
-    --muted: 240 5% 11%;
-    --muted-foreground: 240 5% 64%;
-    --card: 240 8% 6%;
-    --card-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 8% 8%;
-    --accent: 235 85% 75%;
-    --accent-foreground: 240 8% 8%;
-    --border: 240 5% 16%;
+    /* Light, enterprise-trustworthy palette */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;          /* slate-900 — calm, authoritative */
+    --muted: 220 14% 97%;               /* secondary surface */
+    --muted-foreground: 220 9% 42%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;             /* charcoal primary button */
+    --primary-foreground: 0 0% 100%;
+    --accent: 232 72% 52%;              /* indigo — trustworthy blue */
+    --accent-soft: 232 72% 96%;         /* indigo wash for tints */
+    --accent-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --ring: 232 72% 52%;
     --radius: 0.875rem;
   }
 
@@ -26,7 +29,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    color-scheme: dark;
+    color-scheme: light;
     scroll-behavior: smooth;
   }
 
@@ -37,11 +40,10 @@
   }
 
   ::selection {
-    background: hsl(var(--accent) / 0.25);
+    background: hsl(var(--accent) / 0.15);
     color: hsl(var(--foreground));
   }
 
-  /* Subtle scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -50,12 +52,12 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--border));
+    background: hsl(220 13% 85%);
     border-radius: 9999px;
     border: 2px solid hsl(var(--background));
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground) / 0.5);
+    background: hsl(220 9% 65%);
   }
 }
 
@@ -67,45 +69,45 @@
     text-wrap: pretty;
   }
 
-  /* Soft glass surface */
-  .glass {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--foreground) / 0.025) 0%,
-      hsl(var(--foreground) / 0.01) 100%
-    );
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--border) / 0.6);
+  /* Solid surface used in place of dark glass */
+  .surface {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 1px 0 0 hsl(220 13% 95%) inset, 0 1px 2px 0 rgb(15 23 42 / 0.04);
   }
 
-  .glass-strong {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--foreground) / 0.04) 0%,
-      hsl(var(--foreground) / 0.015) 100%
-    );
-    backdrop-filter: blur(16px);
+  .surface-soft {
+    background: hsl(var(--muted));
     border: 1px solid hsl(var(--border));
   }
 
-  /* Section grid background */
+  .surface-elevated {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      0 1px 0 0 hsl(220 13% 95%) inset,
+      0 1px 2px 0 rgb(15 23 42 / 0.04),
+      0 24px 48px -28px rgb(15 23 42 / 0.18);
+  }
+
+  /* Section background grid (very subtle on white) */
   .grid-bg {
     background-image: linear-gradient(
         to right,
-        hsl(var(--border) / 0.55) 1px,
+        hsl(220 13% 88%) 1px,
         transparent 1px
       ),
-      linear-gradient(to bottom, hsl(var(--border) / 0.55) 1px, transparent 1px);
+      linear-gradient(to bottom, hsl(220 13% 88%) 1px, transparent 1px);
     background-size: 56px 56px;
   }
 
   .grid-bg-fine {
     background-image: linear-gradient(
         to right,
-        hsl(var(--border) / 0.4) 1px,
+        hsl(220 13% 92%) 1px,
         transparent 1px
       ),
-      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+      linear-gradient(to bottom, hsl(220 13% 92%) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 
@@ -128,25 +130,26 @@
     );
   }
 
-  /* Subtle radial glow used behind hero */
+  /* Subtle indigo glow used behind hero — much gentler on white */
   .hero-glow {
     background: radial-gradient(
         80% 50% at 50% 0%,
-        hsl(var(--accent) / 0.18) 0%,
+        hsl(var(--accent) / 0.08) 0%,
         transparent 60%
       ),
       radial-gradient(
         50% 60% at 80% 100%,
-        hsl(265 80% 70% / 0.12) 0%,
+        hsl(232 72% 60% / 0.05) 0%,
         transparent 70%
       );
   }
 
+  /* Heading: deep charcoal that softens at the bottom for premium feel */
   .heading-gradient {
     background: linear-gradient(
       180deg,
       hsl(var(--foreground)) 0%,
-      hsl(var(--foreground) / 0.72) 100%
+      hsl(220 30% 28%) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -157,14 +160,13 @@
     background: linear-gradient(
       135deg,
       hsl(var(--accent)) 0%,
-      hsl(265 85% 78%) 100%
+      hsl(245 75% 55%) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  /* Hairline divider */
   .hairline {
     background: linear-gradient(
       90deg,

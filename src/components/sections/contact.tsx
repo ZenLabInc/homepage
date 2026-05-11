@@ -95,7 +95,7 @@ export function Contact() {
                 ].map((t) => (
                   <div
                     key={t}
-                    className="rounded-xl border border-border bg-card/40 px-4 py-3 text-[13px] text-muted-foreground"
+                    className="rounded-xl border border-border bg-white px-4 py-3 text-[13px] text-muted-foreground shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
                   >
                     “{t}”
                   </div>
@@ -112,8 +112,8 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="absolute -inset-px rounded-[20px] bg-gradient-to-b from-foreground/15 via-foreground/5 to-transparent opacity-60 blur-md" />
-            <div className="relative glass-strong rounded-[20px] p-7 md:p-9">
+            <div className="absolute -inset-x-6 -inset-y-3 rounded-[28px] bg-accent/[0.05] blur-2xl -z-10" />
+            <div className="relative rounded-[20px] border border-border bg-white shadow-[0_1px_0_0_hsl(220_13%_95%)_inset,0_1px_2px_0_rgb(15_23_42/0.04),0_24px_48px_-28px_rgb(15_23_42/0.18)] p-7 md:p-9">
               {submitted ? (
                 <SuccessState onReset={() => setSubmitted(false)} />
               ) : (
@@ -145,7 +145,7 @@ export function Contact() {
                           className={`rounded-full border px-3.5 py-1.5 text-[12.5px] transition-colors ${
                             topic === t
                               ? "border-accent/50 bg-accent/10 text-foreground"
-                              : "border-border bg-background/40 text-muted-foreground hover:text-foreground hover:border-foreground/30"
+                              : "border-border bg-white text-muted-foreground hover:text-foreground hover:border-foreground/30"
                           }`}
                         >
                           {t}
@@ -214,7 +214,7 @@ function Bullet({
 }) {
   return (
     <li className="flex items-start gap-3 text-muted-foreground">
-      <span className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-background/60 text-foreground/85">
+      <span className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-white text-foreground">
         <Icon className="h-3.5 w-3.5" />
       </span>
       <span className="leading-relaxed pt-0.5">{children}</span>

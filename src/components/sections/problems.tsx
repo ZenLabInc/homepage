@@ -71,7 +71,7 @@ export function Problems() {
               transition={{ duration: 0.45, delay: i * 0.05 }}
             >
               <Card className="h-full p-7">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground/[0.04] border border-border text-foreground/85">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted border border-border text-foreground">
                   <item.icon className="h-[18px] w-[18px]" />
                 </div>
                 <h3 className="mt-5 text-[15.5px] font-semibold tracking-tight text-foreground leading-snug">
@@ -97,11 +97,11 @@ function ProblemsCTA() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45, delay: 0.3 }}
-      className="relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/[0.08] via-background to-background p-7 flex flex-col justify-between min-h-[220px]"
+      className="relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/[0.06] via-white to-white p-7 flex flex-col justify-between min-h-[220px] shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
     >
-      <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-accent/20 blur-3xl" />
+      <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-accent/15 blur-3xl" />
       <div className="relative">
-        <div className="text-xs uppercase tracking-[0.18em] text-accent/90">
+        <div className="text-xs uppercase tracking-[0.18em] text-accent">
           Insight
         </div>
         <p className="mt-4 text-[15.5px] font-medium leading-snug text-foreground text-balance">

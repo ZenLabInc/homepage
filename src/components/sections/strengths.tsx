@@ -76,7 +76,7 @@ export function Strengths() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="mt-12 grid divide-y divide-border/70 rounded-2xl border border-border bg-card/30 sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+          className="mt-12 grid divide-y divide-border rounded-2xl border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] sm:grid-cols-3 sm:divide-x sm:divide-y-0"
         >
           {stats.map((s) => (
             <div key={s.label} className="p-7 text-center">
@@ -103,11 +103,11 @@ export function Strengths() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-background/30 p-6 transition-colors hover:border-foreground/25"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:border-foreground/25 hover:shadow-[0_18px_36px_-22px_rgb(15_23_42/0.18)]"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-foreground/[0.03]">
-                  <s.icon className="h-[15px] w-[15px] text-foreground/85" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted">
+                  <s.icon className="h-[15px] w-[15px] text-foreground" />
                 </div>
                 <h3 className="text-[15px] font-semibold tracking-tight">
                   {s.title}
@@ -156,12 +156,12 @@ function ComparisonTable() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5 }}
-      className="mt-14 overflow-hidden rounded-2xl border border-border"
+      className="mt-14 overflow-hidden rounded-2xl border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
     >
-      <div className="grid grid-cols-[1.1fr_1fr_1fr] text-xs uppercase tracking-[0.14em] text-muted-foreground border-b border-border bg-card/40">
+      <div className="grid grid-cols-[1.1fr_1fr_1fr] text-xs uppercase tracking-[0.14em] text-muted-foreground border-b border-border bg-muted/50">
         <div className="px-6 py-4"> </div>
-        <div className="px-6 py-4 border-l border-border/70">一般的な受託開発</div>
-        <div className="px-6 py-4 border-l border-border/70 text-foreground bg-accent/[0.04]">
+        <div className="px-6 py-4 border-l border-border">一般的な受託開発</div>
+        <div className="px-6 py-4 border-l border-border text-foreground bg-accent/[0.06]">
           ZenLab
         </div>
       </div>
@@ -169,16 +169,16 @@ function ComparisonTable() {
         <div
           key={row.label}
           className={`grid grid-cols-[1.1fr_1fr_1fr] text-sm ${
-            i !== compare.length - 1 ? "border-b border-border/70" : ""
+            i !== compare.length - 1 ? "border-b border-border" : ""
           }`}
         >
           <div className="px-6 py-5 font-medium text-foreground">
             {row.label}
           </div>
-          <div className="px-6 py-5 border-l border-border/70 text-muted-foreground">
+          <div className="px-6 py-5 border-l border-border text-muted-foreground">
             {row.typical}
           </div>
-          <div className="px-6 py-5 border-l border-border/70 text-foreground bg-accent/[0.03]">
+          <div className="px-6 py-5 border-l border-border text-foreground bg-accent/[0.04]">
             {row.zenlab}
           </div>
         </div>

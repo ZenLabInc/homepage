@@ -11,7 +11,7 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0c",
+          background: "#ffffff",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -28,8 +28,8 @@ export default function Icon() {
               y2="26"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stopColor="#cbd5ff" />
-              <stop offset="1" stopColor="#9b87ff" />
+              <stop offset="0" stopColor="#4f46e5" />
+              <stop offset="1" stopColor="#6366f1" />
             </linearGradient>
           </defs>
           <path
@@ -37,18 +37,18 @@ export default function Icon() {
             stroke="url(#g)"
             strokeWidth="1.8"
             strokeLinecap="round"
-            opacity="0.85"
+            opacity="0.95"
             fill="none"
           />
           <path
             d="M11 11.5 H21 L11 20.5 H21"
-            stroke="url(#g)"
+            stroke="#0f172a"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
           />
-          <circle cx="22.5" cy="20.5" r="1.6" fill="#cbd5ff" />
+          <circle cx="22.5" cy="20.5" r="1.6" fill="#4f46e5" />
         </svg>
       </div>
     ),

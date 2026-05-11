@@ -35,8 +35,8 @@ const groups = [
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative border-t border-border/60 mt-32">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/15 to-transparent" />
+    <footer className="relative border-t border-border mt-32 bg-muted/40">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="container mx-auto py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="space-y-5">
@@ -75,7 +75,7 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-14 pt-6 border-t border-border/60 flex flex-col gap-3 sm:flex-row items-start sm:items-center justify-between text-xs text-muted-foreground/70">
+        <div className="mt-14 pt-6 border-t border-border flex flex-col gap-3 sm:flex-row items-start sm:items-center justify-between text-xs text-muted-foreground/80">
           <p>© {year} {SITE.legalName} All rights reserved.</p>
           <p className="font-mono tracking-tight">
             <span className="text-foreground/60">{SITE.domain}</span>

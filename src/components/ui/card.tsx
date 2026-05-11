@@ -8,7 +8,9 @@ export const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "group relative overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-sm transition-colors duration-300 hover:border-foreground/20",
+      "group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300",
+      "shadow-[0_1px_0_0_hsl(220_13%_95%)_inset,0_1px_2px_0_rgb(15_23_42/0.04)]",
+      "hover:border-foreground/20 hover:shadow-[0_1px_0_0_hsl(220_13%_95%)_inset,0_1px_2px_0_rgb(15_23_42/0.04),0_18px_36px_-22px_rgb(15_23_42/0.18)]",
       className
     )}
     {...props}

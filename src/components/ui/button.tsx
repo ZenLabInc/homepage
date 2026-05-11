@@ -4,18 +4,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "bg-foreground text-background hover:bg-foreground/90 shadow-[0_1px_0_0_hsl(var(--foreground)/0.4)_inset,0_-1px_0_0_hsl(var(--foreground)/0.1)_inset]",
+          "bg-foreground text-background hover:bg-foreground/90 shadow-[0_1px_2px_0_rgb(15_23_42/0.18)]",
         outline:
-          "border border-border bg-transparent text-foreground hover:bg-foreground/[0.04] hover:border-foreground/30",
+          "border border-border bg-white text-foreground hover:bg-muted hover:border-foreground/30 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]",
         ghost:
-          "text-foreground/80 hover:text-foreground hover:bg-foreground/[0.05]",
+          "text-foreground/80 hover:text-foreground hover:bg-muted",
         accent:
-          "bg-accent/15 text-foreground border border-accent/30 hover:bg-accent/20 hover:border-accent/50",
+          "bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_1px_2px_0_rgb(15_23_42/0.12)]",
         link:
           "text-foreground/80 hover:text-foreground underline-offset-4 hover:underline",
       },

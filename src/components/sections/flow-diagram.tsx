@@ -72,8 +72,8 @@ function Insight({
   body: string;
 }) {
   return (
-    <div className="rounded-2xl border border-border bg-card/40 p-6">
-      <div className="text-xs font-mono text-muted-foreground/70">{num}</div>
+    <div className="rounded-2xl border border-border bg-white p-6 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]">
+      <div className="text-xs font-mono text-muted-foreground">{num}</div>
       <h4 className="mt-3 text-[15px] font-semibold tracking-tight text-foreground">
         {title}
       </h4>
@@ -106,9 +106,9 @@ const outputs = [
 
 function FlowGraph() {
   return (
-    <div className="relative rounded-3xl border border-border bg-card/30 p-6 sm:p-10 overflow-hidden">
-      <div className="absolute inset-0 grid-bg-fine opacity-25" />
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[540px] rounded-full bg-accent/10 blur-3xl" />
+    <div className="relative rounded-3xl border border-border bg-white p-6 sm:p-10 overflow-hidden shadow-[0_1px_0_0_hsl(220_13%_95%)_inset,0_1px_2px_0_rgb(15_23_42/0.04),0_24px_48px_-28px_rgb(15_23_42/0.18)]">
+      <div className="absolute inset-0 grid-bg-fine opacity-30" />
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[540px] rounded-full bg-accent/[0.06] blur-3xl" />
 
       <div className="relative grid gap-10 lg:grid-cols-[1fr_auto_1fr_auto_1fr] lg:items-center">
         {/* Inputs */}
@@ -127,9 +127,9 @@ function FlowGraph() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5 }}
-            className="relative mx-auto max-w-[280px] rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/[0.12] to-background p-5 text-center shadow-[0_0_60px_-20px_hsl(var(--accent)/0.6)]"
+            className="relative mx-auto max-w-[280px] rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/[0.06] to-white p-5 text-center shadow-[0_8px_30px_-12px_hsl(var(--accent)/0.35)]"
           >
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl border border-accent/40 bg-background/80">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl border border-accent/30 bg-white">
               <Bot className="h-5 w-5 text-accent" />
             </div>
             <div className="mt-3 text-[11px] uppercase tracking-[0.18em] text-accent/90">
@@ -143,15 +143,15 @@ function FlowGraph() {
             </div>
 
             {/* Sources branch (knowledge) */}
-            <div className="mt-5 border-t border-border/70 pt-4">
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground/80 mb-2">
+            <div className="mt-5 border-t border-border pt-4">
+              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground mb-2">
                 Knowledge
               </div>
               <div className="flex flex-wrap justify-center gap-1.5">
                 {sources.map((s) => (
                   <span
                     key={s.label}
-                    className="inline-flex items-center gap-1 rounded-md border border-border/70 bg-background/60 px-2 py-1 text-[11px] text-foreground/85"
+                    className="inline-flex items-center gap-1 rounded-md border border-border bg-white px-2 py-1 text-[11px] text-foreground"
                   >
                     <s.icon className="h-3 w-3 text-muted-foreground" />
                     {s.label}
@@ -210,9 +210,9 @@ function Node({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.4 }}
-      className="flex items-center gap-3 rounded-xl border border-border bg-background/60 px-4 py-3"
+      className="flex items-center gap-3 rounded-xl border border-border bg-white px-4 py-3 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
     >
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-foreground/[0.03] text-foreground/85">
+      <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-muted text-foreground">
         <Icon className="h-[15px] w-[15px]" />
       </div>
       <div className="text-sm font-medium text-foreground">{label}</div>

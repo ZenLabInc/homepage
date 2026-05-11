@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08080a",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -91,10 +91,10 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`dark ${notoJp.variable} ${mono.variable}`}
+      className={`${notoJp.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background font-sans antialiased selection:bg-accent/25">
+      <body className="min-h-screen bg-background font-sans antialiased">
         {children}
         <script
           type="application/ld+json"
