@@ -31,9 +31,11 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mt-7 text-[15.5px] sm:text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
-            ご要望と既存の業務フローをヒアリングし、
+            株式会社ZenLabは、AI・ロボティクスを活用した
             <br className="hidden sm:inline" />
-            「どこからAIで自動化できるか」を私たちから提案します。
+            <span className="text-foreground font-medium">業務自動化に特化</span>した受託開発スタジオです。
+            <br />
+            業務理解から実装まで一気通貫で支援し、現場で確実に使えるシステムを構築します。
           </motion.p>
 
           <motion.div
