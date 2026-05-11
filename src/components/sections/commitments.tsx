@@ -2,20 +2,20 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Eye, Layers, GraduationCap } from "lucide-react";
+import { Wallet, Layers, BookOpen } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 
 const commitments = [
   {
     no: "01",
-    icon: Eye,
-    title: "進捗とコストの、完全な透明性",
+    icon: Wallet,
+    title: "工数のみで請求、準委任のみ",
     body:
-      "毎週、進捗レポートと工数の内訳を共有します。判断材料が揃った状態で、毎月「続ける／止める／方向転換」を選んでいただける契約形態が基本です。",
+      "エンジニアが手を動かした工数を、そのままご請求します。営業マージンを上乗せしません。契約形態は準委任のみで、固定報酬で抱え込む形は取りません。",
     points: [
-      "週次レポート + 月次定例",
-      "工数の内訳を時間単位で開示",
-      "中断時の引き継ぎを契約に明記",
+      "工数 × 単価のみ (営業マージンなし)",
+      "準委任 — 結果保証ではなく報告と判断材料の提供",
+      "追加が必要な場合は事前に明示してご相談",
     ],
   },
   {
@@ -23,23 +23,23 @@ const commitments = [
     icon: Layers,
     title: "段階契約で、決めきれない不安をなくす",
     body:
-      "PoC・本実装・運用は別契約。先に大きな金額を決めません。各フェーズの成果を見て次に進むかを判断していただけるため、「やってみたら違った」という事故を構造的に防ぎます。",
+      "初回相談 30〜60分は無料。そこからプロトタイプ → 本実装 → 運用・改善・引き継ぎサポートまで、フェーズごとに別契約。先に大きな金額を決めません。",
     points: [
-      "PoC：固定見積 / 短期",
-      "本実装：PoC結果を受けて再見積",
-      "運用：月額 or スポット選択可",
+      "初回相談 30〜60分・無料",
+      "プロトタイプ → 本実装 → 運用 を段階契約",
+      "各フェーズの結果を見て次に進むかを判断",
     ],
   },
   {
     no: "03",
-    icon: GraduationCap,
-    title: "内製化を前提に設計、卒業まで支援",
+    icon: BookOpen,
+    title: "ドキュメント・勉強会で、内製化まで支援",
     body:
-      "ロックインしません。設計書・引き継ぎドキュメント・社内勉強会・ペアプロまで、お客様の社内チームに技術が残る形で進めます。最終的にZenLabが不要になることが理想です。",
+      "使用した技術・設計・マニュアルをドキュメントにして、プロトタイプ時と本実装時にシステムと一緒に納品。使い方の勉強会も対応し、最終的に貴社単独で運用・改善できる状態を目指します。",
     points: [
-      "設計書 / 運用手順書を必ず納品",
-      "社内勉強会・ペアプロ対応",
-      "採用・チーム立ち上げ相談も可",
+      "設計書 / 運用手順書を必ず納品 (工数に含む)",
+      "使い方の勉強会対応 (工数 + 交通費分のみ)",
+      "引き継ぎ後の単発サポートも対応可",
     ],
   },
 ];
@@ -60,7 +60,7 @@ export function Commitments() {
               「外注」の不安を構造で解消する。
             </>
           }
-          description="AI開発はやってみないと分からない領域です。だからこそ、「決めきれない不安」を当事者の判断で減らせる契約・進行体制を取っています。"
+          description="AI開発はやってみないと分からない領域です。だからこそ、料金・契約・引き継ぎの不安を、こちら側の構造でなくします。"
         />
 
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
@@ -125,10 +125,10 @@ export function Commitments() {
           className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4"
         >
           {[
-            { label: "契約形態", value: "準委任 / 請負 切替可" },
-            { label: "請求", value: "月次締め · 翌月末払い" },
-            { label: "NDA", value: "ご希望に応じて先行締結" },
-            { label: "情報の取扱い", value: "国内サーバーで完結する構成にも対応" },
+            { label: "契約形態", value: "準委任のみ (固定報酬制ではありません)" },
+            { label: "請求", value: "エンジニア工数 + 必要交通費 のみ" },
+            { label: "初回相談", value: "30〜60分 / 無料・NDA可" },
+            { label: "引き継ぎ", value: "ドキュメント納品 + 勉強会対応" },
           ].map((item) => (
             <div key={item.label} className="bg-white px-6 py-5">
               <div className="text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground/80">

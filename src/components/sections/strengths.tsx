@@ -3,71 +3,77 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import {
-  Zap,
-  Brain,
-  Lightbulb,
   Compass,
-  Users,
+  Target,
+  Repeat,
+  Boxes,
+  Brain,
   Layers,
 } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 
 const strengths = [
   {
-    icon: Zap,
-    title: "少人数・高速開発",
-    body: "マネジメントレイヤーを最小化。ヒアリングから1〜2週間で動くPoCをお見せします。",
+    icon: Compass,
+    title: "業務理解から始める",
+    body:
+      "ヒアリングで業務フローと既存システムを把握し、「どこからAIで自動化できるか」を私たちから提案します。技術ありきで始めません。",
+  },
+  {
+    icon: Target,
+    title: "「まず何を自動化するか」を明確化",
+    body:
+      "プロトタイプの最初のゴールを「確実に価値が出る一点」に絞ります。「かっこいいけど使えないシステム」を構造的に回避するアプローチです。",
+  },
+  {
+    icon: Repeat,
+    title: "速さ × 何度もの改善",
+    body:
+      "1週間〜1ヶ月でプロトタイプを構築し、社内で触って判断できる状態に。動くものに対して、改善を短サイクルで何度も重ねます。",
+  },
+  {
+    icon: Boxes,
+    title: "既存システム連携・紙の現場でも対応",
+    body:
+      "Salesforce / Notion / 自社DB との連携はもちろん、デジタル化が遅れたアナログ業務にも、実用的に「効く」アプローチを設計します。",
   },
   {
     icon: Brain,
     title: "AI前提の開発体制",
-    body: "コーディング・調査・ドキュメント生成にAIを徹底活用。受託開発の生産性を構造的に変えています。",
-  },
-  {
-    icon: Compass,
-    title: "業務理解からはじめる",
-    body: "技術ありきではなく、まず現場に座って業務を観る。ROIに直結するユースケースを共に見つけます。",
-  },
-  {
-    icon: Lightbulb,
-    title: "要件定義から伴走",
-    body: "「何を作るか決まっていない」フェーズが得意。仮説立案・PoC・本実装まで切れ目なく支援します。",
-  },
-  {
-    icon: Users,
-    title: "内製化を前提に設計",
-    body: "ロックインしない。引き継ぎドキュメント・コードレビュー・社内勉強会まで含めた“卒業設計”を行います。",
+    body:
+      "調査・コーディング・ドキュメント生成に最新のAIを徹底活用。受託開発の生産性を構造的に底上げしているため、速度と費用を両立できます。",
   },
   {
     icon: Layers,
-    title: "モダンな技術スタック",
-    body: "Next.js / TypeScript / AWS / LangGraph / Vercel AI SDK / Pinecone / Supabase など、現場で確かに動く構成。",
+    title: "モダンスタックと内製化設計",
+    body:
+      "Next.js / TypeScript / AWS / LangGraph / Vercel AI SDK など、現場で確かに動く構成。引き継ぎと卒業を見据えた設計を最初から行います。",
   },
 ];
 
 const stats = [
-  { value: "1–2", unit: "weeks", label: "PoC着手から動くデモまでの目安" },
-  { value: "60%+", unit: "", label: "AIツール活用による開発速度の改善" },
-  { value: "100%", unit: "", label: "代表が要件定義〜実装まで関与" },
+  { value: "1w–1mo", unit: "", label: "動くプロトタイプが完成するまでの目安" },
+  { value: "0%", unit: "", label: "営業マージン(エンジニア工数のみを請求)" },
+  { value: "100%", unit: "", label: "代表自身が要件定義〜実装まで関与" },
 ];
 
 export function Strengths() {
   return (
     <section
       id="strengths"
-      className="relative py-24 md:py-32 border-t border-border/60"
+      className="relative py-24 md:py-32 border-t border-border"
     >
       <div className="container mx-auto">
         <SectionHeading
           eyebrow="Why ZenLab"
           title={
             <>
-              受託でも、内製チームのように。
+              <span className="accent-gradient">「使えるAI」</span>だけを、
               <br className="hidden sm:inline" />
-              <span className="accent-gradient">速く・近く・残る</span>。
+              構造的に作る。
             </>
           }
-          description="ZenLabは少人数のエンジニア集団です。一般的な受託開発とは異なる、3つの構造的な強みがあります。"
+          description="業務理解からはじめ、「まず何を自動化するか」を明確にすることで、「かっこいいけど使えないシステム」を構造的に回避します。動くものを最短で作り、改善を何度も重ねる開発リズムが、ZenLabの強みです。"
         />
 
         {/* Stats strip */}
@@ -130,22 +136,22 @@ const compare = [
   {
     label: "立ち上がり速度",
     typical: "1〜3ヶ月の要件定義",
-    zenlab: "1〜2週間で動くPoC",
+    zenlab: "1週間〜1ヶ月で動くプロトタイプ",
   },
   {
-    label: "意思決定",
-    typical: "営業 → PM → エンジニアと多段",
-    zenlab: "代表が要件から実装まで一貫",
+    label: "最初のゴール",
+    typical: "決まった要件をそのまま実装",
+    zenlab: "「まず何を自動化するか」から提案",
   },
   {
-    label: "AI活用",
-    typical: "ツールとして単発利用",
-    zenlab: "開発プロセス全体にAIを組込",
+    label: "料金体系",
+    typical: "営業マージンを含む見積",
+    zenlab: "工数のみ・準委任 (マージンゼロ)",
   },
   {
     label: "納品後の関係",
     typical: "保守費用で抱え込み",
-    zenlab: "内製化・卒業まで設計",
+    zenlab: "ドキュメント納品 + 勉強会で内製化",
   },
 ];
 

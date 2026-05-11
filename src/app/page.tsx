@@ -7,6 +7,7 @@ import { FlowDiagram } from "@/components/sections/flow-diagram";
 import { Strengths } from "@/components/sections/strengths";
 import { Commitments } from "@/components/sections/commitments";
 import { Process } from "@/components/sections/process";
+import { About } from "@/components/sections/about";
 import { FAQ } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
 
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Strengths />
         <Commitments />
         <Process />
+        <About />
         <FAQ />
         <Contact />
       </main>

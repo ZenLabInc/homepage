@@ -7,7 +7,13 @@ export const SITE = {
   tagline: "業務に溶け込む、自律するAIを。",
   taglineEn: "Quiet AI for real work.",
   description:
-    "ZenLab（ゼンラボ）は、AI導入支援・RAG構築・AI Agent開発・業務自動化・社内AIチャット・業務システム開発を一気通貫で支援するAIエンジニアリングスタジオです。業務理解から実装・運用まで伴走し、現場で確かに動くAIを構築します。",
+    "ZenLab(株式会社ゼンラボ)は、業務理解からはじめてAI・ロボティクスで業務自動化を支援するAIエンジニアリングスタジオです。「まず何を自動化するか」を明確にすることで、現場で確実に使えるAIシステムを、速さと反復改善で構築します。",
   email: "hello@zenlab.co.jp",
   contactPath: "/#contact",
+  founded: "2026年5月",
+  representative: "畑田 祐陽",
+  representativeKana: "はただ ゆうひ",
+  representativeRomaji: "Yuhi Hatada",
+  businessDescription: "AI・ロボティクスによる業務自動化の支援",
+  address: "未定 (ご相談時に共有いたします)",
 } as const;
