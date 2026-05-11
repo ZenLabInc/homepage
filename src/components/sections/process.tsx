@@ -4,9 +4,9 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import {
   Headphones,
-  ScanSearch,
   FlaskConical,
   Repeat,
+  Hammer,
   GraduationCap,
 } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
@@ -15,42 +15,42 @@ const steps = [
   {
     no: "01",
     icon: Headphones,
-    title: "ヒアリング",
+    title: "無料ヒアリング",
     duration: "30〜60分・無料",
-    body: "業務フロー・既存システム・実現したいゴールを共有いただきます。「AIで効くポイント」と「効かないポイント」をその場で切り分けます。",
-    deliverables: ["課題マップ", "AI適用ポイント仮置き"],
+    body:
+      "ご要望と既存の業務フローをお聞きし、「どこからAIで自動化できるか」を私たちからご提案します。",
   },
   {
     no: "02",
-    icon: ScanSearch,
-    title: "業務分析",
-    duration: "1〜2週間",
-    body: "業務フロー / データ / 既存ツールを観察し、「まず何を自動化するか」を提案。確実に価値が出る一点に絞ります。",
-    deliverables: ["業務フロー図", "自動化候補リスト"],
+    icon: FlaskConical,
+    title: "プロトタイプ作成",
+    duration: "1週間〜1ヶ月",
+    body:
+      "ご提案内容をもとに、1週間〜1ヶ月でプロトタイプを構築します。実際に触って判断していただける状態にします。",
   },
   {
     no: "03",
-    icon: FlaskConical,
-    title: "プロトタイプ",
-    duration: "1週間〜1ヶ月",
-    body: "動くものを最短で構築。社内で実際に触って判断できる状態にし、システムと一緒に技術・設計ドキュメントを納品します。",
-    deliverables: ["動くプロトタイプ", "設計ドキュメント"],
-  },
-  {
-    no: "04",
     icon: Repeat,
     title: "反復改善",
     duration: "短サイクルで継続",
-    body: "プロトタイプに対して、現場のフィードバックをもとに改善を何度も重ねます。「使えるかどうか」をデータで確認しながら磨きます。",
-    deliverables: ["改善ログ", "評価レポート"],
+    body:
+      "プロトタイプを元に、改善を何度も繰り返します。「速さ × 何度もの改善」を組み合わせた開発アプローチです。",
+  },
+  {
+    no: "04",
+    icon: Hammer,
+    title: "本実装",
+    duration: "別契約で開始",
+    body:
+      "プロトタイプから本実装に進みます。使用した技術・設計・マニュアルのドキュメントを、システムと一緒に納品します。",
   },
   {
     no: "05",
     icon: GraduationCap,
-    title: "本実装 → 引き継ぎ",
-    duration: "1〜3ヶ月+",
-    body: "プロダクション化、運用、改善を継続。ご希望に応じて、ドキュメント納品と勉強会で内製化まで支援します。",
-    deliverables: ["プロダクション実装", "運用手順書 / 勉強会"],
+    title: "運用・改善・引き継ぎ",
+    duration: "ご希望に応じて",
+    body:
+      "保守料金にてZenLabが保守を担当することも、ドキュメントと勉強会(任意)でお客様自身が保守できるようサポートすることも可能です。",
   },
 ];
 
@@ -58,7 +58,7 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative py-24 md:py-32 border-t border-border"
+      className="relative py-24 md:py-32 border-t border-border bg-muted/40"
     >
       <div className="container mx-auto">
         <SectionHeading
@@ -67,10 +67,10 @@ export function Process() {
             <>
               5つのステップで、
               <br className="hidden sm:inline" />
-              曖昧さをそのままにしない。
+              段階的に進められます。
             </>
           }
-          description="“良さそう”で進めません。各ステップで判断材料を揃え、必要なら止まれる進め方を取ります。スピードと反復改善で「使えるかどうか」を早く確認できる構成です。"
+          description="プロトタイプ作成まで / 本実装まで / 運用・改善・引き継ぎサポートまで、それぞれを段階的に契約できます。各フェーズの結果を見て、次に進むかを判断していただける構成です。"
         />
 
         <div className="mt-14 relative">
@@ -105,17 +105,6 @@ export function Process() {
                   <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
                     {s.body}
                   </p>
-                  <ul className="mt-4 space-y-1">
-                    {s.deliverables.map((d) => (
-                      <li
-                        key={d}
-                        className="text-[12px] text-foreground/80 flex items-center gap-2"
-                      >
-                        <span className="h-1 w-1 rounded-full bg-accent/80" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </motion.li>
             ))}

@@ -71,7 +71,7 @@ export function Contact() {
               気軽にご相談ください。
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground max-w-md text-pretty">
-              30〜60分の無料ヒアリングを承っています。AIを使うべきか / 使わないべきかの判断も含めて、率直にお話しします。
+              初回ヒアリングは30〜60分・無料で承っています。ご要望と既存の業務フローをお聞きし、「どこからAIで自動化できるか」をご提案します。
             </p>
 
             <ul className="mt-8 space-y-4 text-sm">
@@ -93,25 +93,6 @@ export function Contact() {
               </Bullet>
             </ul>
 
-            <div className="mt-10 hidden lg:block">
-              <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground/80 mb-3">
-                Examples of what we hear first
-              </p>
-              <div className="space-y-2 max-w-md">
-                {[
-                  "問い合わせ対応の半分くらいは、自動で返したい",
-                  "毎月集計している作業を、Slack に投げたら終わるようにしたい",
-                  "社内のNotionとDriveを横断で検索できるようにしたい",
-                ].map((t) => (
-                  <div
-                    key={t}
-                    className="rounded-xl border border-border bg-white px-4 py-3 text-[13px] text-muted-foreground shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
-                  >
-                    “{t}”
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right: form */}

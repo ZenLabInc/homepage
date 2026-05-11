@@ -9,11 +9,10 @@ import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const nav = [
-  { href: "#services", label: "Services" },
-  { href: "#strengths", label: "Strengths" },
+  { href: "#approach", label: "Approach" },
   { href: "#process", label: "Process" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#about", label: "About" },
-  { href: "#faq", label: "FAQ" },
 ];
 
 export function SiteHeader() {
