@@ -100,6 +100,14 @@ export function SiteFooter() {
                   {SITE.email}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href={`tel:${SITE.phone.replace(/-/g, "")}`}
+                  className="text-foreground/80 hover:text-foreground transition-colors"
+                >
+                  {SITE.phone}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

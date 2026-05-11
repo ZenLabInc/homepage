@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Calendar, ShieldCheck, Check } from "lucide-react";
+import { ArrowRight, Mail, Phone, Calendar, ShieldCheck, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select } from "@/components/ui/select";
@@ -82,14 +82,23 @@ export function Contact() {
                 ご希望に応じて<strong className="text-foreground font-medium"> NDA を先に締結</strong>します
               </Bullet>
               <Bullet icon={Mail}>
-                直接の連絡は{" "}
+                メール:{" "}
                 <Link
                   href={`mailto:${SITE.email}`}
                   className="text-foreground font-medium underline-offset-4 hover:underline"
                 >
                   {SITE.email}
+                </Link>
+              </Bullet>
+              <Bullet icon={Phone}>
+                電話:{" "}
+                <Link
+                  href={`tel:${SITE.phone.replace(/-/g, "")}`}
+                  className="text-foreground font-medium underline-offset-4 hover:underline"
+                >
+                  {SITE.phone}
                 </Link>{" "}
-                まで
+                <span className="text-muted-foreground/80">(メール優先)</span>
               </Bullet>
             </ul>
 

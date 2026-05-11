@@ -17,7 +17,38 @@ const facts: { label: string; value: React.ReactNode }[] = [
   { label: "代表", value: SITE.representative },
   { label: "事業内容", value: SITE.businessDescription },
   { label: "設立", value: SITE.founded },
-  { label: "所在地", value: SITE.address },
+  {
+    label: "所在地",
+    value: (
+      <>
+        〒{SITE.addressZip} {SITE.addressLine1}
+        <br />
+        {SITE.addressLine2}
+      </>
+    ),
+  },
+  {
+    label: "電話",
+    value: (
+      <a
+        href={`tel:${SITE.phone.replace(/-/g, "")}`}
+        className="hover:text-foreground/70 transition-colors"
+      >
+        {SITE.phone}
+      </a>
+    ),
+  },
+  {
+    label: "メール",
+    value: (
+      <a
+        href={`mailto:${SITE.email}`}
+        className="hover:text-foreground/70 transition-colors"
+      >
+        {SITE.email}
+      </a>
+    ),
+  },
 ];
 
 export function Company() {
