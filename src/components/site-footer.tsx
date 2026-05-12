@@ -3,11 +3,9 @@ import { Logo } from "@/components/logo";
 import { SITE } from "@/lib/site";
 
 const sections = [
-  { href: "#approach", label: "強み" },
-  { href: "#process", label: "進め方" },
-  { href: "#pricing", label: "料金と契約" },
+  { href: "#approach", label: "立場" },
+  { href: "#representative", label: "代表から" },
   { href: "#company", label: "会社概要" },
-  { href: "#representative", label: "代表紹介" },
   { href: "#contact", label: "お問い合わせ" },
 ];
 
@@ -36,9 +34,9 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
-              業務に溶け込む、自律するAIを。
+              考える道具を、つくる。
               <br />
-              業務理解からはじめて、現場で確実に使えるシステムを構築します。
+              人間を置き換えるのではなく、人間を拡張するための道具を。
             </p>
             <p className="text-xs text-muted-foreground/70">
               {SITE.legalName} · {SITE.nameJa}
@@ -89,7 +87,7 @@ export function SiteFooter() {
                   href="#contact"
                   className="text-foreground/80 hover:text-foreground transition-colors"
                 >
-                  無料相談
+                  話す
                 </Link>
               </li>
               <li>

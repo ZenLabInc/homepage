@@ -9,9 +9,8 @@ import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const nav = [
-  { href: "#approach", label: "強み" },
-  { href: "#process", label: "進め方" },
-  { href: "#pricing", label: "料金" },
+  { href: "#approach", label: "立場" },
+  { href: "#representative", label: "代表" },
   { href: "#company", label: "会社概要" },
 ];
 
@@ -61,7 +60,7 @@ export function SiteHeader() {
 
         <div className="hidden md:flex items-center">
           <Button asChild variant="primary" size="sm">
-            <Link href="#contact">お問い合わせ</Link>
+            <Link href="#contact">話す</Link>
           </Button>
         </div>
 
@@ -99,7 +98,7 @@ export function SiteHeader() {
               <div className="pt-3">
                 <Button asChild variant="primary" size="sm" className="w-full">
                   <Link href="#contact" onClick={() => setOpen(false)}>
-                    お問い合わせ
+                    話す
                   </Link>
                 </Button>
               </div>

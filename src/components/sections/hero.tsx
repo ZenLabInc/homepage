@@ -20,9 +20,9 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.02em] heading-gradient text-balance"
           >
-            業務に溶け込む、
+            <span className="accent-gradient">考える道具</span>を、
             <br className="hidden sm:inline" />
-            <span className="accent-gradient">自律するAI</span>を。
+            つくる。
           </motion.h1>
 
           <motion.p
@@ -31,11 +31,13 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mt-7 text-[15.5px] sm:text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
-            株式会社ZenLabは、AI・ロボティクスを活用した
+            注意経済が思考を削り、自動化が手を奪っていく。
             <br className="hidden sm:inline" />
-            <span className="text-foreground font-medium">業務自動化に特化</span>した受託開発スタジオです。
+            私たちはそれに抵抗する道具をつくる。
             <br />
-            業務理解から実装まで一気通貫で支援し、現場で確実に使えるシステムを構築します。
+            AIは、<span className="text-foreground font-medium">あなたの代わりに作るためのものではない</span>。
+            <br className="hidden sm:inline" />
+            あなたが作る力を、増幅するためのものだ。
           </motion.p>
 
           <motion.div
@@ -45,8 +47,8 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
             <Button asChild size="lg">
-              <Link href="#contact">
-                無料相談する
+              <Link href="#approach">
+                考えを読む
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -58,7 +60,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.24 }}
             className="mt-7 text-xs text-muted-foreground/80"
           >
-            初回ヒアリング 30〜60分・無料 / 準委任契約のみ / NDA対応
+            一人の作り手から、始まっています。
           </motion.p>
         </div>
       </div>
