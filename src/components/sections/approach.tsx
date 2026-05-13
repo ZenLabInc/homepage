@@ -2,34 +2,28 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Compass, Target, Boxes } from "lucide-react";
+import { Sprout, Pencil, Users } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 
-const approaches = [
+const principles = [
   {
-    icon: Compass,
-    title: "業務理解から始める",
+    icon: Sprout,
+    title: "「拡張」を選ぶ、「置き換え」ではなく",
     body:
-      "ご要望と既存の業務フローをヒアリングし、「どこからAIで自動化できるか」を私たちから提案します。技術ありきで始めません。",
+      "AIで人間の手を消すのは簡単だ。だが消したあとに残るのは、考えなくなった人と、誰のものでもない成果物だ。私たちはあなたを置き換える道具ではなく、あなたを拡張する道具をつくる。",
   },
   {
-    icon: Target,
-    title: "「まず何を自動化するか」を明確化",
+    icon: Pencil,
+    title: "使った瞬間から「考える」が始まる",
     body:
-      "「まず何を自動化／半自動化したいか」を端的に明確にすることで、「かっこいいけど良く分からない、使えないシステム」を回避します。確実に価値が出るシステム開発を、はじめのゴールにします。",
+      "良い道具は、ボタン一つで完成を吐き出さない。使い手に問いを返し、選択を要求し、craft する余白を残す。手を動かすことを、面倒さではなく、価値として設計する。",
   },
   {
-    icon: Boxes,
-    title: "既存システム連携・紙の現場でも対応",
+    icon: Users,
+    title: "AIは、あなたのスタッフ",
     body:
-      "お客様の既存システムと連携するシステムを構築できるほか、デジタル化が進んでいない紙の現場のような場所でも使えるAIシステムを提案・構築します。",
+      "主役は最後まで、あなただ。AIは監督ではない。あなたが描いた像を理解し、技術的な手間を引き受け、あなたが思考に集中できる状態をつくる、優秀なスタッフであるべきだ。",
   },
-];
-
-const stats = [
-  { value: "30–60min", label: "初回ヒアリング(無料)" },
-  { value: "1w–1mo", label: "動くプロトタイプまでの目安" },
-  { value: "0%", label: "営業マージン(エンジニア工数のみを請求)" },
 ];
 
 export function Approach() {
@@ -40,40 +34,21 @@ export function Approach() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="強み"
+          eyebrow="立場"
           title={
             <>
-              <span className="accent-gradient">業務で確実に使えるAI</span>
+              道具は、
               <br className="hidden sm:inline" />
-              システムを、素早く作る。
+              <span className="accent-gradient">考えるためにある。</span>
             </>
           }
-          description="ZenLabの強みは、業務で確実に使えるAIシステムを構築できることです。「速さ × 何度もの改善」を組み合わせた開発アプローチで、現場で動くものを作ります。"
+          description="SNS、ショート動画、生成AI。便利さの裏で、深い思考と作る喜びが少しずつ削られている。私たちはそれを取り戻すための道具をつくる。良い道具とは、人間を受動的にしないものだ。"
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5 }}
-          className="mt-12 grid divide-y divide-border rounded-2xl border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] sm:grid-cols-3 sm:divide-x sm:divide-y-0"
-        >
-          {stats.map((s) => (
-            <div key={s.label} className="p-7 text-center">
-              <div className="text-[clamp(1.85rem,3.6vw,2.4rem)] font-semibold tracking-tight heading-gradient">
-                {s.value}
-              </div>
-              <div className="mt-2 text-[12.5px] text-muted-foreground leading-relaxed">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {approaches.map((a, i) => (
+        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          {principles.map((p, i) => (
             <motion.article
-              key={a.title}
+              key={p.title}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -81,17 +56,32 @@ export function Approach() {
               className="rounded-2xl border border-border bg-white p-7 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] transition-all duration-300 hover:border-foreground/25 hover:shadow-[0_18px_36px_-22px_rgb(15_23_42/0.18)]"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 text-accent">
-                <a.icon className="h-[18px] w-[18px]" />
+                <p.icon className="h-[18px] w-[18px]" />
               </div>
               <h3 className="mt-6 text-[16px] font-semibold tracking-tight leading-snug text-foreground text-balance">
-                {a.title}
+                {p.title}
               </h3>
               <p className="mt-3 text-[13.5px] leading-relaxed text-muted-foreground text-pretty">
-                {a.body}
+                {p.body}
               </p>
             </motion.article>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="mt-14 rounded-2xl border border-border bg-muted/40 p-7 md:p-9"
+        >
+          <div className="text-[10.5px] uppercase tracking-[0.18em] text-muted-foreground/80">
+            いま、つくっているもの
+          </div>
+          <p className="mt-3 text-[14.5px] leading-[1.95] text-foreground/90 max-w-2xl text-pretty">
+            まずは、映像と3Dアニメーションの craft を増幅する道具から始めています。AIが動画を「生成する」のではなく、人間が監督として作る力を、AIで増幅する方向で。詳しいことは、形になってから。
+          </p>
+        </motion.div>
       </div>
     </section>
   );

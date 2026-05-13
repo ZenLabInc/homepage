@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ZenLab — 業務に溶け込む、自律するAIを。";
+export const alt = "ZenLab — 考える道具を、つくる。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -146,8 +146,8 @@ export default async function OG() {
               flexDirection: "column",
             }}
           >
-            <div style={{ display: "flex" }}>Quiet AI</div>
-            <div style={{ display: "flex" }}>for real work.</div>
+            <div style={{ display: "flex" }}>Tools that</div>
+            <div style={{ display: "flex" }}>extend the human.</div>
           </div>
           <div
             style={{
@@ -160,9 +160,9 @@ export default async function OG() {
               alignItems: "center",
             }}
           >
-            <span>AI Engineering Studio</span>
+            <span>Tools Studio</span>
             <span style={{ opacity: 0.4 }}>·</span>
-            <span>RAG / AI Agent / Workflow Automation</span>
+            <span>Augmenting Human Craft</span>
           </div>
         </div>
 
