@@ -3,9 +3,10 @@ import { Logo } from "@/components/logo";
 import { SITE } from "@/lib/site";
 
 const sections = [
-  { href: "#approach", label: "立場" },
-  { href: "#representative", label: "代表から" },
+  { href: "#services", label: "提供サービス" },
+  { href: "#custom-development", label: "受託開発" },
   { href: "#company", label: "会社概要" },
+  { href: "#representative", label: "代表から" },
   { href: "#contact", label: "お問い合わせ" },
 ];
 
@@ -87,7 +88,7 @@ export function SiteFooter() {
                   href="#contact"
                   className="text-foreground/80 hover:text-foreground transition-colors"
                 >
-                  話す
+                  お問い合わせ
                 </Link>
               </li>
               <li>
