@@ -20,48 +20,50 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.02em] heading-gradient text-balance"
           >
-            <span className="accent-gradient">考える道具</span>を、
-            <br className="hidden sm:inline" />
-            つくる。
+            株式会社
+            <span className="accent-gradient">ZenLab</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.08 }}
+            transition={{ duration: 0.6, delay: 0.06 }}
+            className="mt-6 text-[clamp(1.1rem,2.2vw,1.45rem)] font-medium tracking-tight text-foreground text-balance"
+          >
+            とにかく使いやすいAIシステムを、あなたの会社へ。
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.12 }}
             className="mt-7 text-[15.5px] sm:text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
-            注意経済が思考を削り、自動化が手を奪っていく。
+            ZenLab(ゼンラボ)は「とにかく使いやすいAIシステムを構築する」ことに特化した会社です。
             <br className="hidden sm:inline" />
-            私たちはそれに抵抗する道具をつくる。
-            <br />
-            AIは、<span className="text-foreground font-medium">あなたの代わりに作るためのものではない</span>。
+            お客様の既存のシステムと連携したAIシステムをカスタムで開発することもできますし、
             <br className="hidden sm:inline" />
-            あなたが作る力を、増幅するためのものだ。
+            私たちが提供しているサービスの中からお客様に合うものを選んでご使用いただくこともできます。
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.16 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
             <Button asChild size="lg">
-              <Link href="#approach">
-                考えを読む
+              <Link href="#services">
+                サービスを見る
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="#custom-development">
+                受託開発の相談をする
+              </Link>
+            </Button>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.24 }}
-            className="mt-7 text-xs text-muted-foreground/80"
-          >
-            一人の作り手から、始まっています。
-          </motion.p>
         </div>
       </div>
     </section>
