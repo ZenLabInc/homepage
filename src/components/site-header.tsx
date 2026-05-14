@@ -12,7 +12,6 @@ const nav = [
   { href: "#services", label: "提供サービス" },
   { href: "#custom-development", label: "受託開発" },
   { href: "#company", label: "会社概要" },
-  { href: "#representative", label: "代表" },
 ];
 
 export function SiteHeader() {

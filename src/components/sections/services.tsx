@@ -113,19 +113,19 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative py-24 md:py-32 border-t border-border"
+      className="section-edge py-24 md:py-32 border-t border-border"
     >
       <div className="container mx-auto">
         <SectionHeading
           eyebrow="提供サービス"
           title={
             <>
-              <span className="accent-gradient">すぐに試せる</span>、
+              <span className="accent-gradient">今すぐ無料</span>で
               <br className="hidden sm:inline" />
-              すぐに役立つ。
+              お試しいただけます。
             </>
           }
-          description="ZenLabが自社で開発・運用しているAIプロダクトです。お申込みから最短即日で利用開始でき、自社データとの接続も最小限の設定で完了します。無料トライアルからお試しください。"
+          description="ZenLabが自社で開発・運用しているAIプロダクトです。無料トライアルからお試しください。"
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
