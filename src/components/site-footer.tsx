@@ -6,7 +6,7 @@ const sections = [
   { href: "#services", label: "提供サービス" },
   { href: "#custom-development", label: "受託開発" },
   { href: "#company", label: "会社概要" },
-  { href: "#representative", label: "代表から" },
+  { href: "#representative", label: "代表紹介" },
   { href: "#contact", label: "お問い合わせ" },
 ];
 
