@@ -156,9 +156,14 @@ export function Company() {
                 </span>
               </div>
 
-              <p className="mt-5 text-[13.5px] leading-[1.85] text-foreground/90 text-pretty">
-                自動化ツール、使いやすいシステムの開発が大好きです！いただいた仕事は全力で取り組みます！
-              </p>
+              <div className="mt-5 space-y-3 text-[13.5px] leading-[1.85] text-foreground/90 text-pretty">
+                <p>
+                  「使いやすい」は、機能の数では決まりません。誰の、何のためのシステムかを最後まで考え抜いた人の手によってだけ、本当に現場で使われ続けるものは生まれる——そう思っています。
+                </p>
+                <p>
+                  AIや自動化は、それを叶えるための道具のひとつ。便利な機能を載せて終わりではなく、使う人の手と頭の動きにそっと合うところまで作り込むことを、譲らずにやっています。
+                </p>
+              </div>
 
               <div className="mt-7 pt-6 border-t border-border">
                 <h4 className="text-[12.5px] font-medium text-muted-foreground mb-5">
