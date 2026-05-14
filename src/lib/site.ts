@@ -15,7 +15,7 @@ export const SITE = {
   representative: "畑田 祐陽",
   representativeKana: "はただ ゆうひ",
   representativeRomaji: "Yuhi Hatada",
-  businessDescription: "人間の創造性を拡張する道具づくり",
+  businessDescription: "人工知能(AI)・機械学習・ロボティクスを活用したソフトウェア、システム及びサービスの企画、開発、運用、保守及び販売",
   addressZip: "160-0022",
   addressLine1: "東京都新宿区新宿2丁目8番15号",
   addressLine2: "パークフロント新宿 202号室",
