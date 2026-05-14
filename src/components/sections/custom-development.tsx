@@ -141,7 +141,7 @@ export function CustomDevelopment() {
   return (
     <section
       id="custom-development"
-      className="relative py-24 md:py-32 border-t border-border bg-muted/40"
+      className="section-edge py-24 md:py-32 border-t border-border bg-muted/60"
     >
       <div className="container mx-auto">
         <SectionHeading

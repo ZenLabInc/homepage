@@ -178,6 +178,29 @@
     width: 100%;
   }
 
+  /* Section boundary: subtle inset top shadow + gradient hairline
+     to make scroll transitions between sections clearly visible
+     without disrupting the calm, premium feel. */
+  .section-edge {
+    position: relative;
+    box-shadow: inset 0 18px 24px -24px rgb(15 23 42 / 0.06);
+  }
+  .section-edge::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(220 13% 84%) 50%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
   /* Animated dashed flow line — used in flow diagram */
   .flow-line {
     stroke-dasharray: 4 6;

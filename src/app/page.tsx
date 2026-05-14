@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
 import { CustomDevelopment } from "@/components/sections/custom-development";
 import { Company } from "@/components/sections/company";
-import { Representative } from "@/components/sections/representative";
 import { Contact } from "@/components/sections/contact";
 
 export default function HomePage() {
@@ -16,7 +15,6 @@ export default function HomePage() {
         <Services />
         <CustomDevelopment />
         <Company />
-        <Representative />
         <Contact />
       </main>
       <SiteFooter />

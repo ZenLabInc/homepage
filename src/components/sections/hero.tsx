@@ -33,19 +33,6 @@ export function Hero() {
             とにかく使いやすいAIシステムを、あなたの会社へ。
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.12 }}
-            className="mt-7 text-[15.5px] sm:text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto text-pretty"
-          >
-            ZenLab(ゼンラボ)は「とにかく使いやすいAIシステムを構築する」ことに特化した会社です。
-            <br className="hidden sm:inline" />
-            お客様の既存のシステムと連携したAIシステムをカスタムで開発することもできますし、
-            <br className="hidden sm:inline" />
-            私たちが提供しているサービスの中からお客様に合うものを選んでご使用いただくこともできます。
-          </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
