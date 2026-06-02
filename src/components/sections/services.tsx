@@ -6,11 +6,7 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   BookOpen,
-  Bot,
-  Mic,
-  Headset,
-  BarChart3,
-  Gauge,
+  Megaphone,
   type LucideIcon,
 } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
@@ -32,80 +28,28 @@ const products: Product[] = [
     name: "ZenKnowledge",
     kana: "ゼンナレッジ",
     icon: BookOpen,
-    summary: "社内ドキュメントに何でも答える、社内専用AIアシスタント。",
-    uses: [
-      "社内規定・マニュアル・議事録に対するQ&A",
-      "PDF・Word・Notion・Google Driveからの自動学習",
-      "出典付き回答で安心して業務利用",
-    ],
-    audience: "社内問い合わせが多い人事・総務・情シス部門",
-  },
-  {
-    slug: "zenagent",
-    name: "ZenAgent",
-    kana: "ゼンエージェント",
-    icon: Bot,
     summary:
-      "Slack・Gmail・スプレッドシートをつないで業務を自動で進めるAIエージェント。",
+      "Slack・Drive・Notion の資料と会話を全部取り込み、社内のことに出典付きで答える社内QA AI。",
     uses: [
-      "定型メールの起案・送信前確認フロー",
-      "スプレッドシート更新と関係者への通知",
-      "複数ツールをまたぐ業務の代行",
+      "Slack の会話・Google Drive・Notion・PDF を横断して把握",
+      "「どこに何があるか・誰が何を言ったか」を出典付きで即答",
+      "属人化の解消と、一次問い合わせ対応の肩代わり",
     ],
-    audience: "反復業務に時間を取られているバックオフィス",
+    audience: "社内情報が散らばり、問い合わせ対応・属人化に困る組織",
   },
   {
-    slug: "zenmeeting",
-    name: "ZenMeeting",
-    kana: "ゼンミーティング",
-    icon: Mic,
-    summary: "会議音声から議事録・要点・タスクを自動生成。",
-    uses: [
-      "Zoom / Google Meet / 対面録音の文字起こし",
-      "要点・決定事項・ToDoの自動抽出",
-      "担当者ごとのタスク振り分けと自動配信",
-    ],
-    audience: "会議が多いマネジメント層・営業チーム",
-  },
-  {
-    slug: "zensupport",
-    name: "ZenSupport",
-    kana: "ゼンサポート",
-    icon: Headset,
-    summary: "既存FAQと過去対応履歴から学ぶ顧客サポートAI。",
-    uses: [
-      "チャット・メール問い合わせの一次対応",
-      "過去対応に基づく回答案の自動生成",
-      "有人エスカレーションの自動判定",
-    ],
-    audience: "問い合わせ対応に追われるCS部門・ECサイト運営者",
-  },
-  {
-    slug: "zeninsight",
-    name: "ZenInsight",
-    kana: "ゼンインサイト",
-    icon: BarChart3,
-    summary: "自分の会社のデータに、日本語で質問できる。",
-    uses: [
-      "売上・顧客データへの自然言語クエリ",
-      "グラフ・ダッシュボードの自動生成",
-      "既存DB(MySQL / PostgreSQL / BigQuery 等)に接続",
-    ],
-    audience: "SQLが書けない経営層・現場マネージャー",
-  },
-  {
-    slug: "zeneval",
-    name: "ZenEval",
-    kana: "ゼンエバル",
-    icon: Gauge,
+    slug: "zenmedia",
+    name: "ZenMedia",
+    kana: "ゼンメディア",
+    icon: Megaphone,
     summary:
-      "自社で使っているAIの品質・コスト・ハルシネーションを見える化。",
+      "オウンドメディア・SNS・動画チャンネルの運営を、企画から投稿・改善まで丸ごと代行するAI組織。",
     uses: [
-      "AI出力の品質モニタリングとアラート",
-      "モデル別・プロンプト別のコスト分析",
-      "失敗パターンの自動検出と改善提案",
+      "企画・編集方針の設計と運用",
+      "記事・SNS・動画コンテンツの制作（公開前に承認）",
+      "定期投稿と、反応分析・改善の継続運用",
     ],
-    audience: "既にAIを本番運用しているIT部門・AI推進担当",
+    audience: "メディアを持ちたいが、運用の時間がない企業・個人",
   },
 ];
 
@@ -117,25 +61,25 @@ export function Services() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="提供サービス"
+          eyebrow="自社サービス"
           title={
             <>
-              <span className="accent-gradient">今すぐ無料</span>で
+              運用ごと引き受ける、
               <br className="hidden sm:inline" />
-              お試しいただけます。
+              <span className="accent-gradient">2つのAIサービス</span>。
             </>
           }
-          description="ZenLabが自社で開発・運用しているAIプロダクトです。無料トライアルからお試しください。"
+          description="ZenLab が自社で開発・運用する AI サービスです。ツールを売るのではなく、社内ナレッジとメディア運営を「運用される状態」ごとお引き受けします。"
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
           {products.map((p, i) => (
             <motion.article
               key={p.slug}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: (i % 3) * 0.06 }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
               className="group relative flex flex-col rounded-2xl border border-border bg-white p-7 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] transition-all duration-300 hover:border-foreground/25 hover:shadow-[0_18px_36px_-22px_rgb(15_23_42/0.18)]"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 text-accent">
@@ -192,17 +136,12 @@ export function Services() {
               </p>
 
               <div className="mt-7 pt-1">
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className="w-full"
-                >
+                <Button asChild variant="outline" size="sm" className="w-full">
                   <Link
-                    href={`/products/${p.slug}`}
-                    aria-label={`${p.name}を無料で試す`}
+                    href="/#contact"
+                    aria-label={`${p.name}を相談する`}
                   >
-                    無料で試す
+                    相談する
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
