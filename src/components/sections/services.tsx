@@ -29,13 +29,13 @@ const products: Product[] = [
     kana: "ゼンナレッジ",
     icon: BookOpen,
     summary:
-      "Slack・Drive・Notion の資料と会話を全部取り込み、社内のことに出典付きで答える社内QA AI。",
+      "AI組織運営のノウハウを蓄積・参照するための社内ナレッジ管理AI。ZenLabが自社の運営知見を溜め続けるための基盤として実際に使っています。",
     uses: [
-      "Slack の会話・Google Drive・Notion・PDF を横断して把握",
+      "AI組織の運営ノウハウ・意思決定ログを横断して管理",
       "「どこに何があるか・誰が何を言ったか」を出典付きで即答",
-      "属人化の解消と、一次問い合わせ対応の肩代わり",
+      "社内ナレッジの属人化を解消し、組織の記憶を維持",
     ],
-    audience: "社内情報が散らばり、問い合わせ対応・属人化に困る組織",
+    audience: "AI組織の運用知見を資産として蓄積・活用したい組織",
   },
   {
     slug: "zenmedia",
@@ -43,13 +43,13 @@ const products: Product[] = [
     kana: "ゼンメディア",
     icon: Megaphone,
     summary:
-      "オウンドメディア・SNS・動画チャンネルの運営を、企画から投稿・改善まで丸ごと代行するAI組織。",
+      "AI組織運営のノウハウを発信し、顧客への導線を作るメディア運営AI。ZenLabが自社の集客フライホイールを回すために実際に動かしています。",
     uses: [
-      "企画・編集方針の設計と運用",
-      "記事・SNS・動画コンテンツの制作（公開前に承認）",
-      "定期投稿と、反応分析・改善の継続運用",
+      "AI組織運営をテーマにしたコンテンツ企画・制作・投稿",
+      "YouTube・SNS・ブログを横断した継続発信の運用",
+      "反応分析をもとにした発信テーマの改善サイクル",
     ],
-    audience: "メディアを持ちたいが、運用の時間がない企業・個人",
+    audience: "AI組織運営のノウハウで見込み客への導線を作りたい組織",
   },
 ];
 
@@ -61,15 +61,15 @@ export function Services() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="自社サービス"
+          eyebrow="自社AI組織"
           title={
             <>
-              運用ごと引き受ける、
+              AI組織で実際に動かしている、
               <br className="hidden sm:inline" />
-              <span className="accent-gradient">2つのAIサービス</span>。
+              <span className="accent-gradient">2つのサービス</span>。
             </>
           }
-          description="ZenLab が自社で開発・運用する AI サービスです。ツールを売るのではなく、社内ナレッジとメディア運営を「運用される状態」ごとお引き受けします。"
+          description="ZenLab が自社のAI組織運営フライホイールを回すために実際に使っているサービスです。「AI組織をうまく運営している」ことの証明であり、顧客へのノウハウ提供の源泉でもあります。"
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2">

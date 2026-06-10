@@ -30,7 +30,16 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.06 }}
             className="mt-6 text-[clamp(1.1rem,2.2vw,1.45rem)] font-medium tracking-tight text-foreground text-balance"
           >
-            とにかく使いやすいAIシステムを、あなたの会社へ。
+            AI組織を、うまく回す。
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.12 }}
+            className="mt-4 text-[clamp(0.9rem,1.6vw,1.1rem)] text-muted-foreground text-balance max-w-2xl mx-auto"
+          >
+            自社でAI組織を実際に動かしている実践知を、コンサルと受託開発で提供します。
           </motion.p>
 
           <motion.div
@@ -40,14 +49,14 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center justify-center gap-3"
           >
             <Button asChild size="lg">
-              <Link href="#services">
-                サービスを見る
+              <Link href="#contact">
+                AI組織コンサルの相談をする
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="#custom-development">
-                受託開発の相談をする
+              <Link href="#services">
+                自社AI組織を見る
               </Link>
             </Button>
           </motion.div>
