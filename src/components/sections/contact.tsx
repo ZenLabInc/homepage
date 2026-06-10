@@ -12,8 +12,9 @@ import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
 const inquiryTypes = [
-  { value: "service", label: "サービス利用について" },
-  { value: "custom", label: "受託開発について" },
+  { value: "consult", label: "AI組織コンサルについて" },
+  { value: "custom", label: "AI組織システム開発受託について" },
+  { value: "service", label: "ZenKnowledge / ZenMediaについて" },
   { value: "other", label: "採用 / 取材 / その他" },
 ];
 
@@ -56,9 +57,9 @@ export function Contact() {
               </span>
             </motion.div>
             <h2 className="mt-4 text-[clamp(1.85rem,3.4vw,2.85rem)] font-semibold leading-[1.15] tracking-tight heading-gradient text-balance">
-              お気軽に
+              AI組織の相談、
               <br className="hidden sm:inline" />
-              ご相談ください。
+              まずここから。
             </h2>
 
             <ul className="mt-8 space-y-4 text-sm">

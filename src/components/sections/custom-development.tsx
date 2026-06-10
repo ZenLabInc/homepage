@@ -145,15 +145,15 @@ export function CustomDevelopment() {
     >
       <div className="container mx-auto">
         <SectionHeading
-          eyebrow="受託開発"
+          eyebrow="AI組織システム開発受託"
           title={
             <>
-              あなたの会社専用のAIシステムを、
+              あなたの会社専用のAI組織システムを、
               <br className="hidden sm:inline" />
               <span className="accent-gradient">ゼロから設計します。</span>
             </>
           }
-          description="提供サービスでは対応しきれない、業務固有のフローや既存システムとの深い連携が必要な場合は、ゼロからのカスタム開発で承ります。営業マージンを上乗せせず、エンジニア工数のみで請求する透明な契約形態です。"
+          description="AI組織を自社で実際に動かしているZenLabが、あなたの会社のAI組織システムを開発・運用ごと引き受けます。技術を売るのではなく、業務成果にコミットします。営業マージンを上乗せせず、エンジニア工数のみで請求する透明な契約形態です。"
         />
 
         {/* 1. 受託開発で対応できること */}

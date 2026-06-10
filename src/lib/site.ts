@@ -4,10 +4,10 @@ export const SITE = {
   nameJa: "株式会社ゼンラボ",
   url: "https://zenlab.co.jp",
   domain: "zenlab.co.jp",
-  tagline: "考える道具を、つくる。",
-  taglineEn: "Tools that extend the human.",
+  tagline: "業務に溶け込む、自律するAIを。",
+  taglineEn: "Quiet AI for real work.",
   description:
-    "ZenLab(株式会社ゼンラボ)は、人間の主体性を拡張するための道具をつくるスタジオです。注意経済が思考を削り、自動化が手を奪っていく時代に、私たちはそれに抵抗する道具をつくる。AIは人間の代わりに作るためではなく、人間が作る力を増幅するために使う。",
+    "ZenLab(株式会社ゼンラボ)は、AI組織をうまく運営していることを売りにするAIエンジニアリングスタジオです。AI組織運営コンサルとシステム開発受託を通じて、顧客の業務成果にコミットします。",
   email: "hello@zenlab.co.jp",
   phone: "050-8888-5921",
   contactPath: "/#contact",
