@@ -1,0 +1,24 @@
+{
+  "name": "zenlab-homepage-infra",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CDK infrastructure for ZenLab homepage (Amplify Hosting)",
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "deploy": "AWS_PROFILE=zenlab CDK_DEFAULT_ACCOUNT=494003775664 CDK_DEFAULT_REGION=ap-northeast-1 cdk deploy --all",
+    "diff": "AWS_PROFILE=zenlab CDK_DEFAULT_ACCOUNT=494003775664 CDK_DEFAULT_REGION=ap-northeast-1 cdk diff",
+    "synth": "AWS_PROFILE=zenlab CDK_DEFAULT_ACCOUNT=494003775664 CDK_DEFAULT_REGION=ap-northeast-1 cdk synth"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-amplify-alpha": "^2.100.0-alpha.0",
+    "aws-cdk-lib": "^2.100.0",
+    "constructs": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "aws-cdk": "^2.100.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
