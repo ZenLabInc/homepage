@@ -70,7 +70,25 @@ export class HomepageAmplifyStack extends cdk.Stack {
     const mainBranch = amplifyApp.addBranch("main", {
       branchName: "main",
       stage: "PRODUCTION",
-      autoBuild: false, // CI/CD auto-deploy: off until CEO approves production go-live
+      autoBuild: true, // CI/CD auto-deploy: ON (CEO approved production go-live, Issue #67 Phase 3)
+    });
+
+    // Custom domain: zenlab.co.jp + www.zenlab.co.jp
+    // DNS: Cloudflare CNAME flattening for apex, CNAME for www
+    // ACM certificate is auto-issued by Amplify
+    const domain = amplifyApp.addDomain("ZenlabDomain", {
+      domainName: "zenlab.co.jp",
+      subDomains: [
+        {
+          branch: mainBranch,
+          prefix: "www", // www.zenlab.co.jp → main branch
+        },
+        {
+          branch: mainBranch,
+          prefix: "", // zenlab.co.jp (apex) → main branch
+        },
+      ],
+      enableAutoSubdomain: false,
     });
 
     // Outputs
@@ -84,6 +102,12 @@ export class HomepageAmplifyStack extends cdk.Stack {
       value: `https://main.${amplifyApp.defaultDomain}`,
       description: "Amplify default staging URL (*.amplifyapp.com)",
       exportName: "HomepageAmplifyStagingUrl",
+    });
+
+    new cdk.CfnOutput(this, "AmplifyCustomDomain", {
+      value: "zenlab.co.jp",
+      description: "Amplify custom domain (production)",
+      exportName: "HomepageAmplifyCustomDomain",
     });
 
     // Tags
