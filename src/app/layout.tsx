@@ -75,7 +75,7 @@ const orgJsonLd = {
   name: SITE.legalName,
   alternateName: [SITE.nameJa, SITE.name],
   url: SITE.url,
-  logo: `${SITE.url}/icon`,
+  logo: `${SITE.url}/icon.png`,
   email: SITE.email,
   description: SITE.description,
   sameAs: [],

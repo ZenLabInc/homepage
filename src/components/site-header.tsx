@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/logo";
+import { Wordmark } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -40,10 +40,7 @@ export function SiteHeader() {
           aria-label="ZenLab home"
           className="flex items-center gap-2.5"
         >
-          <Logo size={24} />
-          <span className="font-semibold tracking-tight text-foreground text-[15px]">
-            ZenLab
-          </span>
+          <Wordmark height={20} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

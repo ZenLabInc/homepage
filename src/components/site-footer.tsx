@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "@/components/logo";
+import { Wordmark } from "@/components/logo";
 import { SITE } from "@/lib/site";
 
 const sections = [
@@ -28,10 +28,7 @@ export function SiteFooter() {
               aria-label="ZenLab home"
               className="flex items-center gap-2.5"
             >
-              <Logo size={26} />
-              <span className="font-semibold tracking-tight text-foreground text-[15px]">
-                ZenLab
-              </span>
+              <Wordmark height={22} />
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
               考える道具を、つくる。
