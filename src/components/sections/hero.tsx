@@ -14,49 +14,45 @@ export function Hero() {
 
       <div className="container mx-auto relative">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
+          <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.06] tracking-[-0.02em] heading-gradient text-balance"
+            className="text-xs uppercase tracking-[0.18em] text-muted-foreground"
           >
-            株式会社
-            <span className="accent-gradient">ZenLab</span>
+            株式会社ZenLab
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.06 }}
+            className="mt-5 text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
+          >
+            AIに、仕事を
+            <br className="hidden sm:inline" />
+            <span className="accent-gradient">任せる</span>時代をつくる。
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.06 }}
-            className="mt-6 text-[clamp(1.1rem,2.2vw,1.45rem)] font-medium tracking-tight text-foreground text-balance"
-          >
-            AI組織を、うまく回す。
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mt-4 text-[clamp(0.9rem,1.6vw,1.1rem)] text-muted-foreground text-balance max-w-2xl mx-auto"
+            className="mt-6 text-[clamp(0.95rem,1.7vw,1.15rem)] text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed"
           >
-            自社でAI組織を実際に動かしている実践知を、コンサルと受託開発で提供します。
+            人がやるには割に合わない業務を、AIエージェント組織が成果課金で丸ごと実行する。
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-3"
+            className="mt-10 flex items-center justify-center"
           >
             <Button asChild size="lg">
               <Link href="#contact">
-                AI組織コンサルの相談をする
+                お問い合わせ
                 <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="#services">
-                自社AI組織を見る
               </Link>
             </Button>
           </motion.div>

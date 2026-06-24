@@ -3,8 +3,6 @@ import { Wordmark } from "@/components/logo";
 import { SITE } from "@/lib/site";
 
 const sections = [
-  { href: "#services", label: "提供サービス" },
-  { href: "#custom-development", label: "受託開発" },
   { href: "#company", label: "会社概要" },
   { href: "#contact", label: "お問い合わせ" },
 ];
@@ -31,9 +29,9 @@ export function SiteFooter() {
               <Wordmark height={22} />
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
-              考える道具を、つくる。
+              業務に溶け込む、自律するAIを。
               <br />
-              人間を置き換えるのではなく、人間を拡張するための道具を。
+              人がやるには割に合わない業務を、AIエージェント組織が成果ごと引き受ける。
             </p>
             <p className="text-xs text-muted-foreground/70">
               {SITE.legalName} · {SITE.nameJa}

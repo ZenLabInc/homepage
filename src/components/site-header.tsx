@@ -8,11 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Wordmark } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
-const nav = [
-  { href: "#services", label: "提供サービス" },
-  { href: "#custom-development", label: "受託開発" },
-  { href: "#company", label: "会社概要" },
-];
+const nav = [{ href: "#company", label: "会社概要" }];
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = React.useState(false);

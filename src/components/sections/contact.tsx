@@ -12,14 +12,13 @@ import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
 const inquiryTypes = [
-  { value: "consult", label: "AI組織コンサルについて" },
-  { value: "custom", label: "AI組織システム開発受託について" },
-  { value: "service", label: "ZenKnowledge / ZenMediaについて" },
+  { value: "consult", label: "AI組織・業務自動化のご相談" },
+  { value: "custom", label: "システム開発のご相談" },
   { value: "other", label: "採用 / 取材 / その他" },
 ];
 
 export function Contact() {
-  const [inquiryType, setInquiryType] = React.useState("service");
+  const [inquiryType, setInquiryType] = React.useState("consult");
   const [submitted, setSubmitted] = React.useState(false);
   const [submitting, setSubmitting] = React.useState(false);
 
