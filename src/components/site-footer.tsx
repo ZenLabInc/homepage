@@ -3,6 +3,7 @@ import { Wordmark } from "@/components/logo";
 import { SITE } from "@/lib/site";
 
 const sections = [
+  { href: "#services", label: "事業内容" },
   { href: "#company", label: "会社概要" },
   { href: "#contact", label: "お問い合わせ" },
 ];
@@ -29,9 +30,9 @@ export function SiteFooter() {
               <Wordmark height={22} />
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
-              業務に溶け込む、自律するAIを。
+              事業の運営そのものを担うAI組織をつくる。
               <br />
-              人がやるには割に合わない業務を、AIエージェント組織が成果ごと引き受ける。
+              企画から運用・請求までのループを、AI社員のチームが人手ゼロで回す。
             </p>
             <p className="text-xs text-muted-foreground/70">
               {SITE.legalName} · {SITE.nameJa}

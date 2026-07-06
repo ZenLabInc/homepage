@@ -6,29 +6,44 @@ import { motion } from "framer-motion";
 import { ArrowRight, Mail, Phone, Calendar, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
-const inquiryTypes = [
-  { value: "consult", label: "AI組織・業務自動化のご相談" },
-  { value: "custom", label: "システム開発のご相談" },
-  { value: "other", label: "採用 / 取材 / その他" },
-];
-
 export function Contact() {
-  const [inquiryType, setInquiryType] = React.useState("consult");
   const [submitted, setSubmitted] = React.useState(false);
   const [submitting, setSubmitting] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError(null);
     setSubmitting(true);
-    window.setTimeout(() => {
-      setSubmitting(false);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      company: String(data.get("company") ?? ""),
+      message: String(data.get("message") ?? ""),
+      // ハニーポット (人間には見えない。bot が埋めるとサーバー側で無視される)
+      company_website: String(data.get("company_website") ?? ""),
+    };
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error(String(res.status));
       setSubmitted(true);
-    }, 700);
+    } catch {
+      setError(
+        `送信に失敗しました。お手数ですが ${SITE.email} まで直接ご連絡ください。`,
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -102,21 +117,6 @@ export function Contact() {
                 <SuccessState onReset={() => setSubmitted(false)} />
               ) : (
                 <form onSubmit={onSubmit} className="space-y-5">
-                  <Field id="inquiryType" label="お問い合わせ種別" required>
-                    <Select
-                      id="inquiryType"
-                      name="inquiryType"
-                      value={inquiryType}
-                      onChange={(e) => setInquiryType(e.target.value)}
-                    >
-                      {inquiryTypes.map((t) => (
-                        <option key={t.value} value={t.value}>
-                          {t.label}
-                        </option>
-                      ))}
-                    </Select>
-                  </Field>
-
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field id="name" label="お名前" required>
                       <Input id="name" name="name" required placeholder="山田 太郎" />
@@ -156,6 +156,24 @@ export function Contact() {
                       placeholder="ご相談内容をお書きください"
                     />
                   </Field>
+
+                  {/* ハニーポット: 人間には見えない。bot が埋めると弾く。 */}
+                  <div aria-hidden className="hidden">
+                    <label htmlFor="company_website">Company Website</label>
+                    <input
+                      id="company_website"
+                      name="company_website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
+                  {error && (
+                    <p className="text-[13px] text-red-600 leading-relaxed">
+                      {error}
+                    </p>
+                  )}
 
                   <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between pt-2">
                     <p className="text-[11.5px] text-muted-foreground/80">

@@ -68,6 +68,21 @@ export function Company() {
           会社概要
         </motion.h2>
 
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, delay: 0.04 }}
+          className="mt-6 text-[15px] leading-relaxed text-muted-foreground max-w-2xl"
+        >
+          事業の運営を AI 組織に引き受けさせる技術は、やがて事業の枠を超えていく。
+          その先に私たちが見据えているのは——
+          <span className="text-foreground font-medium">
+            AI とロボットが、自律して社会インフラを運営する社会
+          </span>
+          をつくること。
+        </motion.p>
+
         <motion.dl
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

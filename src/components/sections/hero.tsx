@@ -29,9 +29,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.06 }}
             className="mt-5 text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
           >
-            AIに、仕事を
+            事業の運営そのものを担う、
             <br className="hidden sm:inline" />
-            <span className="accent-gradient">任せる</span>時代をつくる。
+            <span className="accent-gradient">AI組織</span>をつくる。
           </motion.h1>
 
           <motion.p
@@ -40,7 +40,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="mt-6 text-[clamp(0.95rem,1.7vw,1.15rem)] text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed"
           >
-            人がやるには割に合わない業務を、AIエージェント組織が成果課金で丸ごと実行する。
+            会社を、まるごとAIに。
           </motion.p>
 
           <motion.div
