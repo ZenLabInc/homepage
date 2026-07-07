@@ -30,7 +30,7 @@ export function SiteFooter() {
               <Wordmark height={22} />
             </Link>
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
-              事業の運営そのものを担うAI組織をつくる。
+              AI / ロボットが自律して、社会インフラを運営する世界をつくる。
               <br />
               企画から運用・請求までのループを、AI社員のチームが人手ゼロで回す。
             </p>
@@ -92,14 +92,6 @@ export function SiteFooter() {
                   className="text-foreground/80 hover:text-foreground transition-colors"
                 >
                   {SITE.email}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`tel:${SITE.phone.replace(/-/g, "")}`}
-                  className="text-foreground/80 hover:text-foreground transition-colors"
-                >
-                  {SITE.phone}
                 </Link>
               </li>
             </ul>

@@ -56,7 +56,7 @@ export function Services() {
           className="mt-5 text-[15px] leading-relaxed text-muted-foreground max-w-2xl"
         >
           人が担ってきたデジタル労働を、ツールで補助するのではなく丸ごと置き換える。
-          その仕組みを自社プロダクトとして開発し、顧客の現場へも届けます。
+          その仕組みを自社プロダクトとして開発し、顧客の現場へも届けています。
         </motion.p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">

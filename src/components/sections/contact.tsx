@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, Calendar, Check } from "lucide-react";
+import { ArrowRight, Mail, Calendar, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -88,16 +88,6 @@ export function Contact() {
                 >
                   {SITE.email}
                 </Link>
-              </Bullet>
-              <Bullet icon={Phone}>
-                電話:{" "}
-                <Link
-                  href={`tel:${SITE.phone.replace(/-/g, "")}`}
-                  className="text-foreground font-medium underline-offset-4 hover:underline"
-                >
-                  {SITE.phone}
-                </Link>{" "}
-                <span className="text-muted-foreground/80">(メール優先)</span>
               </Bullet>
             </ul>
 

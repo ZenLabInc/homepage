@@ -28,17 +28,6 @@ const facts: { label: string; value: React.ReactNode }[] = [
     ),
   },
   {
-    label: "電話",
-    value: (
-      <a
-        href={`tel:${SITE.phone.replace(/-/g, "")}`}
-        className="hover:text-foreground/70 transition-colors"
-      >
-        {SITE.phone}
-      </a>
-    ),
-  },
-  {
     label: "メール",
     value: (
       <a
@@ -68,21 +57,6 @@ export function Company() {
           会社概要
         </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5, delay: 0.04 }}
-          className="mt-6 text-[15px] leading-relaxed text-muted-foreground max-w-2xl"
-        >
-          事業の運営を AI 組織に引き受けさせる技術は、やがて事業の枠を超えていく。
-          その先に私たちが見据えているのは——
-          <span className="text-foreground font-medium">
-            AI とロボットが、自律して社会インフラを運営する社会
-          </span>
-          をつくること。
-        </motion.p>
-
         <motion.dl
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -104,6 +78,34 @@ export function Company() {
             </div>
           ))}
         </motion.dl>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="mt-8 grid gap-5 sm:grid-cols-2"
+        >
+          <div className="rounded-2xl border border-border bg-white p-6 sm:p-7 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]">
+            <p className="text-[12.5px] uppercase tracking-[0.14em] text-muted-foreground">
+              理念
+            </p>
+            <p className="mt-3 text-[15px] font-medium leading-relaxed text-foreground">
+              AI / ロボットが自律して、社会インフラを運営する世界をつくる。
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-border bg-white p-6 sm:p-7 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]">
+            <p className="text-[12.5px] uppercase tracking-[0.14em] text-muted-foreground">
+              基本労働指針
+            </p>
+            <ol className="mt-3 space-y-1.5 text-[15px] leading-relaxed text-foreground">
+              <li>1. 目的から考える。</li>
+              <li>2. とにかく働く。</li>
+              <li>3. 早く走り続ける。</li>
+            </ol>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
