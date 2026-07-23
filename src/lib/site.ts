@@ -1,13 +1,13 @@
 export const SITE = {
   name: "ZenLab",
   legalName: "ZenLab Inc.",
-  nameJa: "株式会社ゼンラボ",
+  nameJa: "株式会社ZenLab",
   url: "https://zenlab.co.jp",
   domain: "zenlab.co.jp",
   tagline: "AI / ロボットが自律して、社会インフラを運営する世界をつくる。",
   taglineEn: "AI teams that run the business.",
   description:
-    "ZenLab(株式会社ゼンラボ)は、事業の運営そのものをAIエージェント組織に引き受けさせるAIエンジニアリングスタジオです。企画から運用・請求までのループを人手ゼロで回す仕組み(ZenOrg)を開発しています。",
+    "ZenLab(株式会社ZenLab)は、AI・ロボティクスで現場の自動化を支援するエンジニアリングスタジオです。イベントカメラを用いた非接触の設備モニタリング端末を自社開発しています。",
   email: "info@zenlab.co.jp",
   contactPath: "/#contact",
   founded: "2026年5月",
