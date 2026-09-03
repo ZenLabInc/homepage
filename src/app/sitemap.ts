@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE.url}/shiwakekun`,
+      url: `${SITE.url}/omakase-keiri`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

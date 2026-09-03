@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/#services", label: "事業内容" },
-  { href: "/shiwakekun", label: "仕分けくん" },
+  { href: "/omakase-keiri", label: "おまかせ経理" },
   { href: "/#company", label: "会社概要" },
 ];
 
