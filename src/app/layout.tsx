@@ -37,8 +37,6 @@ export const metadata: Metadata = {
     "業務自動化",
     "AIエンジニアリング",
     "ロボティクス",
-    "おまかせ経理",
-    "経理自動化",
     "ZenLab",
   ],
   alternates: { canonical: SITE.url },

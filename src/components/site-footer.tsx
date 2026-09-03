@@ -4,7 +4,6 @@ import { SITE } from "@/lib/site";
 
 const sections = [
   { href: "/#services", label: "事業内容" },
-  { href: "/omakase-keiri", label: "おまかせ経理" },
   { href: "/#company", label: "会社概要" },
   { href: "/#contact", label: "お問い合わせ" },
 ];
