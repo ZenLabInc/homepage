@@ -9,8 +9,9 @@ import { Wordmark } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const nav = [
-  { href: "#services", label: "事業内容" },
-  { href: "#company", label: "会社概要" },
+  { href: "/#services", label: "事業内容" },
+  { href: "/shiwakekun", label: "仕分けくん" },
+  { href: "/#company", label: "会社概要" },
 ];
 
 export function SiteHeader() {
@@ -56,7 +57,7 @@ export function SiteHeader() {
 
         <div className="hidden md:flex items-center">
           <Button asChild variant="primary" size="sm">
-            <Link href="#contact">お問い合わせ</Link>
+            <Link href="/#contact">お問い合わせ</Link>
           </Button>
         </div>
 
@@ -93,7 +94,7 @@ export function SiteHeader() {
               ))}
               <div className="pt-3">
                 <Button asChild variant="primary" size="sm" className="w-full">
-                  <Link href="#contact" onClick={() => setOpen(false)}>
+                  <Link href="/#contact" onClick={() => setOpen(false)}>
                     お問い合わせ
                   </Link>
                 </Button>

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 type Item = {
@@ -10,6 +11,7 @@ type Item = {
   body: string;
   status?: string;
   cta?: boolean;
+  href?: string;
 };
 
 const items: Item[] = [
@@ -18,6 +20,13 @@ const items: Item[] = [
     title: "非接触の設備モニタリング",
     status: "開発中",
     body: "イベントカメラ——生物の目に着想を得た、明るさの変化だけを捉えるセンサー——で、回転機械の振動を離れた場所から計測する端末を開発しています。センサーを貼らず、配線もせず、カメラ1台で複数の設備を見守る。故障の予兆を捉え、現場が次に何をすべきかまで示すことを目指しています。",
+  },
+  {
+    kind: "Product",
+    title: "仕分けくん",
+    status: "提供中",
+    href: "/shiwakekun",
+    body: "税理士事務所向けの請求書受信サービス。顧問先ごとの専用アドレスに請求書を送るだけで、AIが読み取り、整った名前で保存し、freee・マネーフォワードへ自動で届けます。届いていない請求書は月初に自動で督促。事務所の「集める・名前を付ける・上げる・催促する」を無くします。",
   },
   {
     kind: "Service",
@@ -37,7 +46,7 @@ export function Services() {
       id="services"
       className="section-edge py-24 md:py-32 border-t border-border"
     >
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,9 +68,10 @@ export function Services() {
           自社プロダクトの開発で得た知見は、そのまま顧客の現場にも活かしています。
         </motion.p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => {
-            const clickable = Boolean(item.cta);
+            const clickable = Boolean(item.cta || item.href);
+            const go = item.href ? () => { window.location.href = item.href as string; } : goToContact;
             return (
               <motion.div
                 key={item.title}
@@ -69,7 +79,7 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.06 }}
-                onClick={clickable ? goToContact : undefined}
+                onClick={clickable ? go : undefined}
                 role={clickable ? "button" : undefined}
                 tabIndex={clickable ? 0 : undefined}
                 onKeyDown={
@@ -77,7 +87,7 @@ export function Services() {
                     ? (e) => {
                         if (e.key === "Enter" || e.key === " ") {
                           e.preventDefault();
-                          goToContact();
+                          go();
                         }
                       }
                     : undefined
@@ -103,7 +113,13 @@ export function Services() {
                 <p className="mt-4 text-[15px] leading-relaxed text-foreground/80">
                   {item.body}
                 </p>
-                {clickable && (
+                {item.href && (
+                  <Link href={item.href} className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-accent" onClick={(e) => e.stopPropagation()}>
+                    サービスの詳細へ
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                )}
+                {item.cta && (
                   <p className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-accent">
                     お問い合わせへ
                     <ArrowRight className="h-3.5 w-3.5" />
