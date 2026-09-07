@@ -28,16 +28,8 @@ export const metadata: Metadata = {
   creator: SITE.legalName,
   publisher: SITE.legalName,
   keywords: [
-    "イベントカメラ",
-    "振動監視",
-    "予知保全",
-    "非接触計測",
-    "設備モニタリング",
-    "AI受託開発",
-    "業務自動化",
-    "AIエンジニアリング",
-    "ロボティクス",
-    "ZenLab",
+    "創造の道具", "ものづくり", "AI", "ソフトウェア開発",
+    "ロボティクス", "AI受託開発", "業務自動化", "ZenLab",
   ],
   alternates: { canonical: SITE.url },
   openGraph: {

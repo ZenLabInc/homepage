@@ -71,10 +71,15 @@ export function Contact() {
               </span>
             </motion.div>
             <h2 className="mt-4 text-[clamp(1.85rem,3.4vw,2.85rem)] font-semibold leading-[1.15] tracking-tight heading-gradient text-balance">
-              AI組織の相談、
+              ZenLabへのご相談、
               <br className="hidden sm:inline" />
-              まずここから。
+              こちらから。
             </h2>
+
+            <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted-foreground">
+              商品・道具についてのご質問、開発や業務のAI化のご相談、採用、取材・協業、YouTubeに関するご連絡など、会社に関するお問い合わせを受け付けています。
+              個人の方も、お気軽にご連絡ください。
+            </p>
 
             <ul className="mt-8 space-y-4 text-sm">
               <Bullet icon={Calendar}>
@@ -111,11 +116,11 @@ export function Contact() {
                     <Field id="name" label="お名前" required>
                       <Input id="name" name="name" required placeholder="山田 太郎" />
                     </Field>
-                    <Field id="company" label="会社名">
+                    <Field id="company" label="会社名・所属（任意）">
                       <Input
                         id="company"
                         name="company"
-                        placeholder="株式会社サンプル"
+                        placeholder="個人の方は空欄で構いません"
                       />
                     </Field>
                   </div>
@@ -129,13 +134,7 @@ export function Contact() {
                         placeholder="you@example.com"
                       />
                     </Field>
-                    <Field id="role" label="役割 / 部署">
-                      <Input
-                        id="role"
-                        name="role"
-                        placeholder="任意"
-                      />
-                    </Field>
+
                   </div>
 
                   <Field id="message" label="お問い合わせ内容" required>
@@ -143,7 +142,7 @@ export function Contact() {
                       id="message"
                       name="message"
                       required
-                      placeholder="ご相談内容をお書きください"
+                      placeholder="商品・道具、採用、YouTube、開発のご相談など、ご用件をお書きください"
                     />
                   </Field>
 
@@ -167,7 +166,7 @@ export function Contact() {
 
                   <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between pt-2">
                     <p className="text-[11.5px] text-muted-foreground/80">
-                      送信前に、内容を確認させていただきます。
+                      内容をご確認のうえ、送信してください。
                     </p>
                     <Button type="submit" size="lg" disabled={submitting}>
                       {submitting ? "送信中..." : "送信する"}

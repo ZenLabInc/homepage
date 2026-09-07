@@ -79,33 +79,7 @@ export function Company() {
           ))}
         </motion.dl>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5, delay: 0.08 }}
-          className="mt-8 grid gap-5 sm:grid-cols-2"
-        >
-          <div className="rounded-2xl border border-border bg-white p-6 sm:p-7 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]">
-            <p className="text-[12.5px] uppercase tracking-[0.14em] text-muted-foreground">
-              理念
-            </p>
-            <p className="mt-3 text-[15px] font-medium leading-relaxed text-foreground">
-              AI / ロボットが自律して、社会インフラを運営する世界をつくる。
-            </p>
-          </div>
 
-          <div className="rounded-2xl border border-border bg-white p-6 sm:p-7 shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]">
-            <p className="text-[12.5px] uppercase tracking-[0.14em] text-muted-foreground">
-              基本労働指針
-            </p>
-            <ol className="mt-3 space-y-1.5 text-[15px] leading-relaxed text-foreground">
-              <li>1. 目的から考える。</li>
-              <li>2. とにかく働く。</li>
-              <li>3. 早く走り続ける。</li>
-            </ol>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

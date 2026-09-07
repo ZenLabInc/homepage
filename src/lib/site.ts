@@ -7,7 +7,7 @@ export const SITE = {
   tagline: "AI / ロボットが自律して、社会インフラを運営する世界をつくる。",
   taglineEn: "AI teams that run the business.",
   description:
-    "ZenLab(株式会社ZenLab)は、AI・ロボティクスで現場の自動化を支援するエンジニアリングスタジオです。イベントカメラを用いた非接触の設備モニタリング端末を自社開発しています。",
+    "ZenLab(株式会社ZenLab)は、個人の創造を手助けする道具づくりに取り組んでいます。AI・ソフトウェア・ロボティクスを使った試作・開発と、企業向けの業務のAI化支援を行っています。",
   email: "info@zenlab.co.jp",
   contactPath: "/#contact",
   founded: "2026年5月",
