@@ -13,7 +13,13 @@ export function createInquiryHandler(send: (mail: InquiryMail) => Promise<void>)
   return async function POST(req: Request): Promise<Response> {
     const json = (body: object, status = 200) => Response.json(body, { status });
     const origin = req.headers.get("origin");
-    if (origin && origin !== new URL(req.url).origin) {
+    // Amplify may expose an internal hostname to the SSR handler.
+    const allowedOrigins = ["https://zenlab.co.jp", "https://www.zenlab.co.jp"];
+    const requestUrl = new URL(req.url);
+    if (["localhost", "127.0.0.1"].includes(requestUrl.hostname)) {
+      allowedOrigins.push(requestUrl.origin);
+    }
+    if (origin && !allowedOrigins.includes(origin)) {
       return json({ error: "invalid_origin" }, 403);
     }
     if (!req.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {

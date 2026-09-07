@@ -34,3 +34,12 @@ test("mail service failure must not appear as a successful submission", async ()
   assert.equal(response.status, 502);
   assert.deepEqual(await response.json(), { error: "delivery_failed" });
 });
+
+test("accepts the public origin behind Amplify's internal hostname", async () => {
+  let sends = 0;
+  const req = new Request("http://internal-amplify:3000/api/inquiry", {
+    method: "POST", headers: { "content-type": "application/json", origin: "https://www.zenlab.co.jp" }, body: JSON.stringify(input),
+  });
+  assert.equal((await createInquiryHandler(async () => { sends++; })(req)).status, 200);
+  assert.equal(sends, 1);
+});
