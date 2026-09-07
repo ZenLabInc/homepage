@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { LOGO_LOWER_PATH, LOGO_UPPER_PATH } from "@/lib/brand";
 
 export const runtime = "edge";
 export const alt = "ZenLab — 考える道具を、つくる。";
@@ -80,37 +81,9 @@ export default async function OG() {
               justifyContent: "center",
             }}
           >
-            <svg viewBox="0 0 32 32" width={32} height={32}>
-              <defs>
-                <linearGradient
-                  id="ogg"
-                  x1="6"
-                  y1="6"
-                  x2="26"
-                  y2="26"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stopColor="#4f46e5" />
-                  <stop offset="1" stopColor="#6366f1" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M16 4.5 A11.5 11.5 0 1 1 6.5 21.6"
-                stroke="url(#ogg)"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                fill="none"
-                opacity="0.95"
-              />
-              <path
-                d="M11 11.5 H21 L11 20.5 H21"
-                stroke="#0f172a"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-              <circle cx="22.5" cy="20.5" r="1.6" fill="#4f46e5" />
+            <svg viewBox="0 0 112 112" width={40} height={40}>
+              <path fill="#0f172a" d={LOGO_LOWER_PATH} />
+              <path fill="#4f46e5" d={LOGO_UPPER_PATH} />
             </svg>
           </div>
           <div
