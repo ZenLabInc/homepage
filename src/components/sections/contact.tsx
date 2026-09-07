@@ -114,12 +114,13 @@ export function Contact() {
                 <form onSubmit={onSubmit} className="space-y-5">
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field id="name" label="お名前" required>
-                      <Input id="name" name="name" required placeholder="山田 太郎" />
+                      <Input id="name" name="name" maxLength={200} required placeholder="山田 太郎" />
                     </Field>
                     <Field id="company" label="会社名・所属（任意）">
                       <Input
                         id="company"
                         name="company"
+                        maxLength={200}
                         placeholder="個人の方は空欄で構いません"
                       />
                     </Field>
@@ -130,6 +131,7 @@ export function Contact() {
                         id="email"
                         name="email"
                         type="email"
+                        maxLength={254}
                         required
                         placeholder="you@example.com"
                       />
@@ -141,6 +143,7 @@ export function Contact() {
                     <Textarea
                       id="message"
                       name="message"
+                      maxLength={5000}
                       required
                       placeholder="商品・道具、採用、YouTube、開発のご相談など、ご用件をお書きください"
                     />
