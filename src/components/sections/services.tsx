@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Services() {
   return (
@@ -20,15 +21,19 @@ export function Services() {
         <motion.article initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.5 }}
           className="mt-10 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
-          <p className="text-xs font-medium tracking-wider text-accent">これからの中心となる事業</p>
+          <p className="text-xs font-medium tracking-wider text-accent">動画制作サービス</p>
           <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
-            つくりたいを、かたちにする道具。
+            Eizeno
           </h3>
           <p className="mt-5 max-w-2xl text-[15px] leading-loose text-foreground/80">
-            思い描いたものを、自分の手でつくり、人に見せる。その一歩を支える道具を目指しています。
-            AI・ソフトウェア・ロボティクスを使い、自分たちでもつくりながら、試作と実験を重ねていきます。
+            商品の写真やサービスの画面をもとに、AIと会話しながら紹介動画をつくれるサービスです。
+            構成や素材を確認しながら、映像・ナレーション・音楽を組み合わせた一本に仕上げます。
           </p>
-          <p className="mt-5 text-sm text-muted-foreground">現在は、道具の構想・試作に取り組んでいます。</p>
+          <Button asChild className="mt-7">
+            <a href="https://eizeno.com/">
+              Eizenoを見る<ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </a>
+          </Button>
         </motion.article>
         <motion.article initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.5 }}
