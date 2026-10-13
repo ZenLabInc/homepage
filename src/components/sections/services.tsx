@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,19 +22,32 @@ export function Services() {
         <motion.article initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.5 }}
           className="mt-10 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
-          <p className="text-xs font-medium tracking-wider text-accent">動画制作サービス</p>
-          <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
-            Eizeno
-          </h3>
-          <p className="mt-5 max-w-2xl text-[15px] leading-loose text-foreground/80">
-            商品の写真やサービスの画面をもとに、AIと会話しながら紹介動画をつくれるサービスです。
-            構成や素材を確認しながら、映像・ナレーション・音楽を組み合わせた一本に仕上げます。
-          </p>
-          <Button asChild className="mt-7">
-            <a href="https://eizeno.com/">
-              Eizenoを見る<ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </a>
-          </Button>
+          <div className="grid items-center gap-8 md:grid-cols-[1fr_1.05fr]">
+            <div>
+              <p className="text-xs font-medium tracking-wider text-accent">AIと会話する動画制作サービス</p>
+              <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Eizeno</h3>
+              <p className="mt-4 text-xl font-semibold leading-relaxed text-foreground">仕事で必要な動画を、<br />Webブラウザで。</p>
+              <p className="mt-4 text-[15px] leading-loose text-foreground/80">
+                手元の資料や操作映像をもとに、AIと会話して構成・編集・ナレーションを制作。
+                確認からMP4の保存まで、ひとつの画面で進められます。
+              </p>
+              <ul aria-label="Eizenoの用途" className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-accent">
+                {["商品・サービス紹介", "社内手順書", "社内研修"].map((use) => (
+                  <li key={use} className="rounded-full border border-accent/20 bg-white px-3 py-2">{use}</li>
+                ))}
+              </ul>
+              <Button asChild className="mt-7">
+                <a href="https://eizeno.com/">使い方と制作例を見る<ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
+              </Button>
+            </div>
+            <figure>
+              <a href="https://eizeno.com/#workflow" className="block overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                <Image src="/images/eizeno-studio.png" width={1440} height={960} sizes="(min-width: 768px) 440px, 90vw"
+                  alt="Eizenoの操作画面。左でAIと会話し、右で手順動画の構成案を確認します。" className="h-auto w-full" />
+              </a>
+              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">実際の操作画面（サンプル会話）。詳しい流れはEizenoのサイトで。</figcaption>
+            </figure>
+          </div>
         </motion.article>
         <motion.article initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.5 }}
