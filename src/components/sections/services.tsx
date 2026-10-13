@@ -31,10 +31,12 @@ export function Services() {
                 手元の資料や操作映像をもとに、AIと会話して構成・編集・ナレーションを制作。
                 確認からMP4の保存まで、ひとつの画面で進められます。
               </p>
-              <ul aria-label="Eizenoの用途" className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-accent">
+              <p className="mt-5 text-xs text-muted-foreground">たとえば、こんな用途に</p>
+              <ul aria-label="Eizenoの用途の一例" className="mt-2 flex flex-wrap gap-2 text-xs font-medium text-accent">
                 {["商品・サービス紹介", "社内手順書", "社内研修"].map((use) => (
                   <li key={use} className="rounded-full border border-accent/20 bg-white px-3 py-2">{use}</li>
                 ))}
+                <li className="self-center text-muted-foreground">など</li>
               </ul>
               <Button asChild className="mt-7">
                 <a href="https://eizeno.com/">使い方と制作例を見る<ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
