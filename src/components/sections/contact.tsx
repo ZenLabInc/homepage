@@ -109,7 +109,7 @@ export function Contact() {
             <div className="absolute -inset-x-6 -inset-y-3 rounded-[28px] bg-accent/[0.05] blur-2xl -z-10" />
             <div className="relative rounded-[20px] border border-border bg-white shadow-[0_1px_0_0_hsl(220_13%_95%)_inset,0_1px_2px_0_rgb(15_23_42/0.04),0_24px_48px_-28px_rgb(15_23_42/0.18)] p-7 md:p-9">
               {submitted ? (
-                <SuccessState onReset={() => setSubmitted(false)} />
+                <SuccessState />
               ) : (
                 <form onSubmit={onSubmit} className="space-y-5">
                   <div className="grid gap-5 sm:grid-cols-2">
@@ -225,28 +225,15 @@ function Bullet({
   );
 }
 
-function SuccessState({ onReset }: { onReset: () => void }) {
+function SuccessState() {
   return (
     <div className="text-center py-10">
       <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-accent/10">
         <Check className="h-5 w-5 text-accent" />
       </div>
-      <h3 className="mt-5 text-lg font-semibold tracking-tight">
-        お問い合わせを受け付けました
-      </h3>
-      <p className="mt-2 text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
-        通常 2 営業日以内にご返信いたします。お急ぎの場合は{" "}
-        <Link
-          href={`mailto:${SITE.email}`}
-          className="text-foreground font-medium underline-offset-4 hover:underline"
-        >
-          {SITE.email}
-        </Link>{" "}
-        まで直接ご連絡ください。
+      <p className="mt-5 text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
+        お問い合わせを受け付けました。通常 2 営業日以内にご返信いたします。
       </p>
-      <Button variant="ghost" size="sm" className="mt-6" onClick={onReset}>
-        別のお問い合わせを送る
-      </Button>
     </div>
   );
 }
