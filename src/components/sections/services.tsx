@@ -24,30 +24,30 @@ export function Services() {
           className="mt-10 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_1.05fr]">
             <div>
-              <p className="text-xs font-medium tracking-wider text-accent">AIと会話する動画制作サービス</p>
+              <p className="text-xs font-medium tracking-wider text-accent">3Dアニメーション専用のAIエージェント</p>
               <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Eizeno</h3>
-              <p className="mt-4 text-xl font-semibold leading-relaxed text-foreground">仕事で必要な動画を、<br />Webブラウザで。</p>
+              <p className="mt-4 text-xl font-semibold leading-relaxed text-foreground">頭の中の世界を、<br />動く3Dに。</p>
               <p className="mt-4 text-[15px] leading-loose text-foreground/80">
-                手元の資料や操作映像をもとに、AIと会話して構成・編集・ナレーションを制作。
-                確認からMP4の保存まで、ひとつの画面で進められます。
+                言葉・写真・3Dモデルを渡して会話すると、AIがモデリング・動き・カメラ・光をコードで組み立て、
+                ナレーションと音楽まで仕上げます。確認からMP4の保存まで、Webブラウザで。
               </p>
-              <p className="mt-5 text-xs text-muted-foreground">たとえば、こんな用途に</p>
-              <ul aria-label="Eizenoの用途の一例" className="mt-2 flex flex-wrap gap-2 text-xs font-medium text-accent">
-                {["商品・サービス紹介", "社内手順書", "社内研修"].map((use) => (
+              <p className="mt-5 text-xs text-muted-foreground">たとえば、こんな題材に</p>
+              <ul aria-label="Eizenoの題材の一例" className="mt-2 flex flex-wrap gap-2 text-xs font-medium text-accent">
+                {["キャラクター・物語", "商品・プロダクト", "仕組みの説明"].map((use) => (
                   <li key={use} className="rounded-full border border-accent/20 bg-white px-3 py-2">{use}</li>
                 ))}
                 <li className="self-center text-muted-foreground">など</li>
               </ul>
               <Button asChild className="mt-7">
-                <a href="https://eizeno.com/">使い方と制作例を見る<ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
+                <a href="https://eizeno.com/">制作例とつくり方を見る<ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
               </Button>
             </div>
             <figure>
-              <a href="https://eizeno.com/#workflow" className="block overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
-                <Image src="/images/eizeno-studio.png" width={1440} height={960} sizes="(min-width: 768px) 440px, 90vw"
-                  alt="Eizenoの操作画面。左でAIと会話し、右で手順動画の構成案を確認します。" className="h-auto w-full" />
+              <a href="https://eizeno.com/#uses" className="block overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                <Image src="/images/eizeno-3d.jpg" width={1280} height={720} sizes="(min-width: 768px) 440px, 90vw"
+                  alt="Eizenoで制作した3Dアニメーションの一場面。図形を組み合わせたロケットが雲の上を進みます。" className="h-auto w-full" />
               </a>
-              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">実際の操作画面（サンプル会話）。詳しい流れはEizenoのサイトで。</figcaption>
+              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">Eizenoの3D制作の見本（架空の題材）。詳しい制作例はEizenoのサイトで。</figcaption>
             </figure>
           </div>
         </motion.article>
