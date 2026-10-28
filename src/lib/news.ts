@@ -33,7 +33,7 @@ export type NewsItem = {
 
 export const NEWS: NewsItem[] = [
   {
-    date: "2026-10-28",
+    date: "2026-10-29",
     category: "展示会",
     title:
       EXHIBITION_2026.status === "held"
