@@ -9,6 +9,7 @@ import { Wordmark } from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 const nav = [
+  { href: "/#news", label: "お知らせ" },
   { href: "/#services", label: "事業内容" },
   { href: "/#company", label: "会社概要" },
 ];
