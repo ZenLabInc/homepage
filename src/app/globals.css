@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --font-sans: "Noto Sans JP";
+    --font-mono: "JetBrains Mono";
     /* Light, enterprise-trustworthy palette */
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;          /* slate-900 — calm, authoritative */
