@@ -64,3 +64,7 @@ pnpm build
 ## ライセンス
 
 ライセンス表記が追加されるまでは、著作権者から明示的に許可された範囲を除き、コードの再利用・再配布はできません。
+
+## Eizenoの紹介・展示デモ
+
+事業紹介は `src/components/sections/services.tsx`、展示デモは `src/app/eizeno/demo/page.tsx` で管理します。公開動画とポスターは `public/eizeno/demo/` にあります。素材は `ZenLabInc/eizeno` の main、`frontend/public/lp/gallery/` の完成動画6本とWebPをそのままコピーしています（2026-10-30更新）。Kumoita・Fudacho・KomadoはZenLabが用意した架空のサービスです。音声ナレーションなしのシネマ作例にもBGMがあります。更新時は元動画・ポスター・尺・音声表記を合わせて確認してください。
