@@ -49,3 +49,7 @@ See [infra/INQUIRY-MAIL.md](infra/INQUIRY-MAIL.md) for deployment and production
 ## License
 
 No open-source license has been declared. Copyright remains with ZenLab Inc. unless separate permission is granted.
+
+## Eizeno introduction and exhibition demos
+
+The introduction is in `src/components/sections/services.tsx`; the demo page is in `src/app/eizeno/demo/page.tsx`. Videos and posters in `public/eizeno/demo/` are copied unchanged from the six completed videos and WebP posters in `ZenLabInc/eizeno`, main, `frontend/public/lp/gallery/` (updated October 30, 2026). Kumoita, Fudacho, and Komado are fictional services created by ZenLab. Cinema examples have background music without spoken narration. Keep media, durations, posters, and audio labels consistent when updating.

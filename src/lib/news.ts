@@ -33,12 +33,12 @@ export type NewsItem = {
 
 export const NEWS: NewsItem[] = [
   {
-    date: "2026-10-29",
+    date: "2026-10-30",
     category: "展示会",
     title:
       EXHIBITION_2026.status === "held"
-        ? `${exhibitionHeadline()}。展示したEizenoの動画と資料をご覧いただけます`
-        : `${exhibitionHeadline()}（${EXHIBITION_2026.period}）。展示するEizenoの動画と資料を公開しました`,
+        ? `${exhibitionHeadline()}。展示したEizenoのSaaS紹介動画デモをご覧いただけます`
+        : `${exhibitionHeadline()}（${EXHIBITION_2026.period}）。展示するEizenoのSaaS紹介動画デモを公開しました`,
     href: EXHIBITION_2026.demoPath,
   },
 ];

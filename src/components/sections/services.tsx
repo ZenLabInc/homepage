@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { DemoVideo } from "@/components/demo/demo-player";
 
 export function Services() {
   return (
@@ -24,16 +24,17 @@ export function Services() {
           className="mt-10 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_1.05fr]">
             <div>
-              <p className="text-xs font-medium tracking-wider text-accent">3Dアニメーション専用のAIエージェント</p>
+              <p className="text-xs font-medium tracking-wider text-accent">SaaSの紹介動画をつくるAI</p>
               <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">Eizeno</h3>
-              <p className="mt-4 text-xl font-semibold leading-relaxed text-foreground">頭の中の世界を、<br />動く3Dに。</p>
+              <p className="mt-4 text-xl font-semibold leading-relaxed text-foreground">サービスの魅力を、<br />実際の画面で伝える。</p>
               <p className="mt-4 text-[15px] leading-loose text-foreground/80">
-                言葉・写真・3Dモデルを渡して会話すると、AIがモデリング・動き・カメラ・光をコードで組み立て、
-                ナレーションと音楽まで仕上げます。確認からMP4の保存まで、Webブラウザで。
+                SaaSのURLを入れると、AIが実際の画面を操作・録画します。
+                テイストを選ぶと、ナレーション・BGM・字幕つきの紹介動画に。
+                完成後は会話で直して、MP4で保存できます。
               </p>
-              <p className="mt-5 text-xs text-muted-foreground">たとえば、こんな題材に</p>
-              <ul aria-label="Eizenoの題材の一例" className="mt-2 flex flex-wrap gap-2 text-xs font-medium text-accent">
-                {["キャラクター・物語", "商品・プロダクト", "仕組みの説明"].map((use) => (
+              <p className="mt-5 text-xs text-muted-foreground">サービスを伝える、こんな場面に</p>
+              <ul aria-label="Eizenoの利用場面" className="mt-2 flex flex-wrap gap-2 text-xs font-medium text-accent">
+                {["サービス紹介", "機能の説明", "営業・提案"].map((use) => (
                   <li key={use} className="rounded-full border border-accent/20 bg-white px-3 py-2">{use}</li>
                 ))}
                 <li className="self-center text-muted-foreground">など</li>
@@ -43,11 +44,20 @@ export function Services() {
               </Button>
             </div>
             <figure>
-              <a href="https://eizeno.com/#uses" className="block overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
-                <Image src="/images/eizeno-3d.jpg" width={1280} height={720} sizes="(min-width: 768px) 440px, 90vw"
-                  alt="Eizenoで制作した3Dアニメーションの一場面。図形を組み合わせたロケットが雲の上を進みます。" className="h-auto w-full" />
-              </a>
-              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">Eizenoの3D制作の見本（架空の題材）。詳しい制作例はEizenoのサイトで。</figcaption>
+              <DemoVideo
+                id="service-kumoita"
+                src="/eizeno/demo/kumoita-cinema-ja.mp4"
+                poster="/eizeno/demo/kumoita-cinema-ja.webp"
+                title="Kumoitaのサービス紹介動画"
+                duration="1:08"
+                hasAudio
+              />
+              <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                自社で用意した架空のサービス「Kumoita」の制作例。実際の画面をもとにした紹介動画です（音楽のみ）。
+              </figcaption>
+              <Link href="/eizeno/demo" className="mt-3 inline-flex items-center gap-1.5 rounded text-sm font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                展示デモ・作例集を見る<ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
             </figure>
           </div>
         </motion.article>
