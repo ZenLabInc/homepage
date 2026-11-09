@@ -27,11 +27,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.06 }}
-            className="mt-5 text-[clamp(2.4rem,5.6vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
+            className="mt-5 text-[clamp(1.9rem,4.4vw,3.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
           >
-            <span className="accent-gradient">AI / ロボット</span>が自律して、
+            <span className="accent-gradient">AI</span>を利用した、
             <br className="hidden sm:inline" />
-            社会インフラを運営する世界をつくる。
+            <span className="inline-block">ソフトウェア/ロボットの</span>
+            <span className="inline-block">研究・開発・</span>
+            <span className="inline-block">提供をしています。</span>
           </motion.h1>
 
           <motion.div

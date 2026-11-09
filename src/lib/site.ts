@@ -4,11 +4,10 @@ export const SITE = {
   nameJa: "株式会社ZenLab",
   url: "https://zenlab.co.jp",
   domain: "zenlab.co.jp",
-  tagline: "AI / ロボットが自律して、社会インフラを運営する世界をつくる。",
+  tagline: "AIを利用した、ソフトウェア/ロボットの研究・開発・提供をしています。",
   taglineEn: "AI teams that run the business.",
   description:
     "ZenLab(株式会社ZenLab)は、個人の創造を手助けする道具づくりに取り組んでいます。AI・ソフトウェア・ロボティクスを使った試作・開発と、企業向けの業務のAI化支援を行っています。",
-  email: "info@zenlab.co.jp",
   contactPath: "/#contact",
   founded: "2026年5月",
   representative: "畑田 祐陽",

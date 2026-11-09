@@ -27,17 +27,6 @@ const facts: { label: string; value: React.ReactNode }[] = [
       </>
     ),
   },
-  {
-    label: "メール",
-    value: (
-      <a
-        href={`mailto:${SITE.email}`}
-        className="hover:text-foreground/70 transition-colors"
-      >
-        {SITE.email}
-      </a>
-    ),
-  },
 ];
 
 export function Company() {
