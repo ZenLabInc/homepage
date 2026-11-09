@@ -1,14 +1,12 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Calendar, Check } from "lucide-react";
+import { ArrowRight, Calendar, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { SITE } from "@/lib/site";
 
 export function Contact() {
   const [submitted, setSubmitted] = React.useState(false);
@@ -39,7 +37,7 @@ export function Contact() {
       setSubmitted(true);
     } catch {
       setError(
-        `送信に失敗しました。お手数ですが ${SITE.email} まで直接ご連絡ください。`,
+        "送信に失敗しました。お手数ですが、時間をおいて再度お試しください。",
       );
     } finally {
       setSubmitting(false);
@@ -84,15 +82,6 @@ export function Contact() {
             <ul className="mt-8 space-y-4 text-sm">
               <Bullet icon={Calendar}>
                 <strong className="text-foreground font-medium">通常 2 営業日以内</strong>に返信します
-              </Bullet>
-              <Bullet icon={Mail}>
-                メール:{" "}
-                <Link
-                  href={`mailto:${SITE.email}`}
-                  className="text-foreground font-medium underline-offset-4 hover:underline"
-                >
-                  {SITE.email}
-                </Link>
               </Bullet>
             </ul>
 
