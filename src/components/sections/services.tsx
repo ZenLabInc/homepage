@@ -65,13 +65,13 @@ export function Services() {
           viewport={{ once: true }} transition={{ duration: 0.5 }}
           className="mt-6 rounded-2xl border border-border bg-white p-8 sm:p-9">
           <p className="text-xs font-medium tracking-wider text-muted-foreground">提供中のサービス</p>
-          <h3 className="mt-3 text-xl font-semibold tracking-tight text-foreground">業務のAI化支援</h3>
+          <h3 className="mt-3 text-xl font-semibold tracking-tight text-foreground">AIを利用したソフトウェア・ロボットの研究開発</h3>
           <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-foreground/80">
-            企業の業務に合わせたAI・ソフトウェアの設計・開発を行っています。
-            現場の課題を整理し、業務プロセスの自動化や、実際に使える仕組みづくりを支援します。
+            AIを利用したソフトウェアとロボットの研究開発を行っています。
+            試作と検証を重ね、実際に使える道具や仕組みづくりに取り組んでいます。
           </p>
           <Link href="#contact" className="mt-5 inline-flex items-center gap-1.5 rounded text-sm font-medium text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
-            AI化支援について相談する<ArrowRight aria-hidden="true" className="h-4 w-4" />
+            研究開発について相談する<ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Link>
         </motion.article>
       </div>
