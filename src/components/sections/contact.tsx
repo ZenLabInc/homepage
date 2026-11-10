@@ -75,7 +75,7 @@ export function Contact() {
             </h2>
 
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted-foreground">
-              商品・道具についてのご質問、開発や業務のAI化のご相談、採用、取材・協業、YouTubeに関するご連絡など、会社に関するお問い合わせを受け付けています。
+              商品・道具についてのご質問、AIを利用したソフトウェア・ロボットの研究開発に関するご相談、採用、取材・協業、YouTubeに関するご連絡など、会社に関するお問い合わせを受け付けています。
               個人の方も、お気軽にご連絡ください。
             </p>
 
@@ -85,6 +85,9 @@ export function Contact() {
               </Bullet>
             </ul>
 
+            <p className="mt-6 max-w-md text-xs leading-relaxed text-muted-foreground">
+              ※ 営業メールには返信いたしません。
+            </p>
           </div>
 
           {/* Right: form */}
