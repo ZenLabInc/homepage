@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { LOGO_LOWER_PATH, LOGO_UPPER_PATH } from "@/lib/brand";
 
 export const runtime = "edge";
-export const alt = "ZenLab — 考える道具を、つくる。";
+export const alt = "ZenLab — AI×ロボットアームで、中小企業の手作業を自動化する。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -119,8 +119,8 @@ export default async function OG() {
               flexDirection: "column",
             }}
           >
-            <div style={{ display: "flex" }}>Tools that</div>
-            <div style={{ display: "flex" }}>extend the human.</div>
+            <div style={{ display: "flex" }}>Robot arms</div>
+            <div style={{ display: "flex" }}>you can teach.</div>
           </div>
           <div
             style={{
@@ -133,9 +133,9 @@ export default async function OG() {
               alignItems: "center",
             }}
           >
-            <span>Tools Studio</span>
+            <span>Robotics Studio</span>
             <span style={{ opacity: 0.4 }}>·</span>
-            <span>Augmenting Human Craft</span>
+            <span>Automation for Small-Batch Work</span>
           </div>
         </div>
 

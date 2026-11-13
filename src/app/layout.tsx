@@ -16,8 +16,9 @@ export const metadata: Metadata = {
   creator: SITE.legalName,
   publisher: SITE.legalName,
   keywords: [
-    "創造の道具", "ものづくり", "AI", "ソフトウェア開発",
-    "ロボティクス", "AI受託開発", "業務自動化", "ZenLab",
+    "ロボットアーム", "ティーチング", "多品種少量", "小ロット",
+    "ピッキング", "中小企業", "製造業", "工場 自動化",
+    "AI", "ロボティクス", "業務自動化", "ZenLab",
   ],
   alternates: { canonical: SITE.url },
   openGraph: {

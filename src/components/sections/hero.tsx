@@ -29,17 +29,28 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.06 }}
             className="mt-5 text-[clamp(1.9rem,4.4vw,3.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
           >
-            <span className="accent-gradient">AI</span>を利用した、
+            <span className="accent-gradient">AI</span>
+            <span className="inline-block">×ロボットアームで、</span>
             <br className="hidden sm:inline" />
-            <span className="inline-block">ソフトウェア/ロボットの</span>
-            <span className="inline-block">研究・開発・</span>
-            <span className="inline-block">提供をしています。</span>
+            <span className="inline-block">中小企業の手作業を</span>
+            <span className="inline-block">自動化する。</span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.12 }}
+            className="mt-7 mx-auto max-w-2xl text-[15px] sm:text-base leading-loose text-muted-foreground text-balance"
+          >
+            品目がよく変わる、数が少ない。だから自動化できずに人がやっている作業があります。
+            <br className="hidden sm:inline" />
+            人に教えるのと同じ手間で作業を覚える、軽くて安いロボットアームをつくっています。
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.18 }}
+            transition={{ duration: 0.6, delay: 0.22 }}
             className="mt-10 flex items-center justify-center"
           >
             <Button asChild size="lg">

@@ -1,9 +1,7 @@
 /**
  * お知らせと展示会の情報。
  *
- * 産業交流展2026は開催前のため status: "upcoming"(「出展します」)。
- * 会期後、実際に出展したことを確認してから status: "held" にし、
- * report に開催報告の本文を入れる(「出展しました」に切り替わる)。
+ * 産業交流展2026(2026-11-11〜13)は会期終了。実際に出展したことを確認したので status: "held"。
  * 会場・小間番号は公式の出展者情報で確認できたものだけを入れる。未確認なら null のまま(表示しない)。
  */
 export type ExhibitionStatus = "upcoming" | "held";
@@ -11,7 +9,7 @@ export type ExhibitionStatus = "upcoming" | "held";
 export const EXHIBITION_2026 = {
   name: "産業交流展2026",
   period: "2026年11月11日（水）〜13日（金）",
-  status: "upcoming" as ExhibitionStatus,
+  status: "held" as ExhibitionStatus,
   venue: null as string | null,
   booth: null as string | null,
   report: null as string | null,
@@ -28,18 +26,18 @@ export type NewsItem = {
   date: string; // YYYY-MM-DD
   category: string;
   title: string;
-  href: string;
+  body?: string;
+  href?: string;
 };
 
 export const NEWS: NewsItem[] = [
   {
-    date: "2026-10-30",
+    date: "2026-11-14",
     category: "展示会",
-    title:
-      EXHIBITION_2026.status === "held"
-        ? `${exhibitionHeadline()}。展示したEizenoのSaaS紹介動画デモをご覧いただけます`
-        : `${exhibitionHeadline()}（${EXHIBITION_2026.period}）。展示するEizenoのSaaS紹介動画デモを公開しました`,
-    href: EXHIBITION_2026.demoPath,
+    title: `${exhibitionHeadline()}。言葉で指示して作業を覚えるロボットアームを展示しました`,
+    body:
+      "オープンソースのロボットアーム SO-101 に手先カメラを付け、「撮る → 見る → 考える → 動く」を繰り返すエージェントループで動かすデモを展示しました。" +
+      "来場された製造業のみなさまから、多種類・小ロットの現場で何が自動化できていないのかを伺えたことが、いちばんの収穫でした。",
   },
 ];
 

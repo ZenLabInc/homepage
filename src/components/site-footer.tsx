@@ -5,7 +5,6 @@ import { SITE } from "@/lib/site";
 const sections = [
   { href: "/#news", label: "お知らせ" },
   { href: "/#services", label: "事業内容" },
-  { href: "/eizeno/demo", label: "Eizeno 展示デモ・作例集" },
   { href: "/#company", label: "会社概要" },
   { href: "/#contact", label: "お問い合わせ" },
 ];
