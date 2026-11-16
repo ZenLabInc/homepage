@@ -4,7 +4,7 @@ export const SITE = {
   nameJa: "株式会社ZenLab",
   url: "https://zenlab.co.jp",
   domain: "zenlab.co.jp",
-  tagline: "AI×ロボットアームで、中小企業の手作業を自動化する。",
+  tagline: "AI×ものづくりで、中小企業の生産性向上に寄与する。",
   taglineEn: "AI-taught robot arms for small-batch work.",
   description:
     "ZenLab(株式会社ZenLab)は、中小企業の多種類・小ロットの手作業を自動化するロボットアームを開発しています。専門の技術者によるティーチングを必要とせず、人に教えるのと同じ手間で作業を覚えるアームを目指しています。",

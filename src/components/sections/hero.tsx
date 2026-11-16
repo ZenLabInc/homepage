@@ -30,10 +30,10 @@ export function Hero() {
             className="mt-5 text-[clamp(1.9rem,4.4vw,3.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
           >
             <span className="accent-gradient">AI</span>
-            <span className="inline-block">×ロボットアームで、</span>
+            <span className="inline-block">×ものづくりで、</span>
             <br className="hidden sm:inline" />
-            <span className="inline-block">中小企業の手作業を</span>
-            <span className="inline-block">自動化する。</span>
+            <span className="inline-block">中小企業の</span>
+            <span className="inline-block">生産性向上に寄与する。</span>
           </motion.h1>
 
           <motion.p

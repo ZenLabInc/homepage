@@ -75,6 +75,29 @@ export function Services() {
           </Button>
         </motion.article>
 
+        <motion.article initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.5 }}
+          className="mt-6 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
+          <p className="text-xs font-medium tracking-wider text-accent">開発予定 ─ センサー端末</p>
+          <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
+            「これを見張って」と、言葉で頼める見張り役。
+          </h3>
+          <p className="mt-5 max-w-3xl text-[15px] leading-loose text-foreground/80">
+            違う部品の混入、部品箱の空、古いアナログメーターの値。現場には、人が目で見回っている小さな見張りが数多くあります。
+            これまでのカメラ検査は、見張る対象ごとに画像を集めて調整する開発が必要で、品種の多い現場では割に合いませんでした。
+            私たちがこれから開発するのは、見張りたいことを日本語で伝えるだけで、カメラとAIが判断し、理由と写真を添えて人に知らせ、記録に残すセンサー端末です。
+            品種や見張る対象が変わっても、頼み方を変えるだけで使えることを目指します。
+          </p>
+          <p className="mt-5 max-w-3xl text-[13px] leading-relaxed text-muted-foreground">
+            現在は開発段階です。現場に合わせた試作・導入からご相談を承っています。
+            作業の写真や動画をお送りいただければ、できること・できないことを正直にお返しします。
+          </p>
+
+          <Button asChild className="mt-7">
+            <Link href="#contact">現場の作業を相談する<ArrowRight aria-hidden="true" className="h-4 w-4" /></Link>
+          </Button>
+        </motion.article>
+
         <motion.article initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.5 }}
           className="mt-6 rounded-2xl border border-border bg-white p-8 sm:p-9">
