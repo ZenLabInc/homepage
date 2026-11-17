@@ -30,10 +30,10 @@ export function Hero() {
             className="mt-5 text-[clamp(1.9rem,4.4vw,3.5rem)] font-semibold leading-[1.08] tracking-[-0.02em] heading-gradient text-balance"
           >
             <span className="accent-gradient">AI</span>
-            <span className="inline-block">×ものづくりで、</span>
+            <span className="inline-block">×ロボットで、</span>
             <br className="hidden sm:inline" />
-            <span className="inline-block">中小企業の</span>
-            <span className="inline-block">生産性向上に寄与する。</span>
+            <span className="inline-block">人ができることを</span>
+            <span className="inline-block">広げる。</span>
           </motion.h1>
 
           <motion.p
@@ -42,9 +42,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.12 }}
             className="mt-7 mx-auto max-w-2xl text-[15px] sm:text-base leading-loose text-muted-foreground text-balance"
           >
-            品目がよく変わる、数が少ない。だから自動化できずに人がやっている作業があります。
+            人は道具をつくることで、ひとりではできなかったことを可能にしてきました。
             <br className="hidden sm:inline" />
-            人に教えるのと同じ手間で作業を覚える、軽くて安いロボットアームをつくっています。
+            自宅や部室の机の上で、言葉で頼むだけで手を貸してくれるロボットアームをつくっています。
           </motion.p>
 
           <motion.div

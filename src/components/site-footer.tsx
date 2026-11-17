@@ -33,7 +33,7 @@ export function SiteFooter() {
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
               {SITE.tagline}
               <br />
-              企画から運用・請求までのループを、AI社員のチームが人手ゼロで回す。
+              学生や若い作り手が、これまでできなかったことをできるようにする道具をつくっています。
             </p>
             <p className="text-xs text-muted-foreground/70">
               {SITE.legalName} · {SITE.nameJa}

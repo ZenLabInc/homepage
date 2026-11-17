@@ -7,15 +7,15 @@ import { Button } from "@/components/ui/button";
 
 const CONDITIONS = [
   { title: "正確に掴める", body: "狙った物を、狙った所で掴んで運び、置く。" },
-  { title: "教えるのが簡単", body: "人にやり方を伝えるくらいの手間で覚える。専門の技術者によるティーチングを要らなくする。" },
-  { title: "軽くて、安い", body: "1人で持ち運べ、作業台に載せ替えられる。専用の架台や安全柵を前提にしない。" },
+  { title: "教えるのが簡単", body: "人にやり方を伝えるくらいの手間で覚える。プログラムや専門知識を要らなくする。" },
+  { title: "軽くて、安い", body: "1人で持ち運べ、机の上に置ける。個人でも手が届くことを目指す。" },
   { title: "失敗を知らせる", body: "うまくいかなかったことを検知して、人に伝える。黙って失敗し続けない。" },
 ];
 
 const TARGETS = [
-  "品目がよく変わる、小ロットの仕分け",
-  "コンテナからの取り出しと並べ替え",
-  "1日1〜2時間、人が単調に手を動かしている作業",
+  "ものづくりや試作で、もう1本手がほしい作業",
+  "3Dプリントや工作で、くり返しになる片付け・仕分け",
+  "撮影や記録で、ひとりではやりにくい作業",
 ];
 
 export function Services() {
@@ -28,7 +28,7 @@ export function Services() {
           事業内容
         </motion.h2>
         <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-          多種類・小ロットだから自動化できずにいる作業を、ロボットアームで引き受けます。
+          言葉で頼めば手を貸してくれる、机の上のロボットアームを開発しています。
         </p>
 
         <motion.article initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
@@ -36,13 +36,12 @@ export function Services() {
           className="mt-10 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
           <p className="text-xs font-medium tracking-wider text-accent">開発中 ─ ロボットアーム</p>
           <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
-            人に教えるように、覚えるアーム。
+            言葉で頼める、作業台の相棒。
           </h3>
           <p className="mt-5 max-w-3xl text-[15px] leading-loose text-foreground/80">
-            既存の産業用ロボットは、ティーチングに時間と専門知識がかかります。
-            品目がよく変わり、1回あたりの数が少ない現場では割に合わず、結局そのまま人の手が残ります。
+            これまでロボットに作業をさせるには、プログラムや作業ごとの学習が必要で、個人が気軽に使える道具ではありませんでした。
             私たちがつくっているのは、カメラで見て、言葉で指示され、「いや、そうじゃない」と直されながら作業を覚えるアームです。
-            覚えたあとは、AIにも通信にも頼らず、手元だけで同じ作業を繰り返します。
+            頼み方を変えるだけで、いろいろな作業に使えることを目指しています。
           </p>
 
           <ul aria-label="開発中のアームが満たすべき条件" className="mt-9 grid gap-4 sm:grid-cols-2">
@@ -55,7 +54,7 @@ export function Services() {
           </ul>
 
           <div className="mt-9 rounded-2xl border border-border bg-white p-6 sm:p-7">
-            <p className="text-xs font-medium tracking-wider text-muted-foreground">こんな作業を探しています</p>
+            <p className="text-xs font-medium tracking-wider text-muted-foreground">一緒に試したい作業</p>
             <ul className="mt-3 space-y-2">
               {TARGETS.map((t) => (
                 <li key={t} className="flex gap-2.5 text-[14px] leading-relaxed text-foreground/85">
@@ -65,36 +64,13 @@ export function Services() {
               ))}
             </ul>
             <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">
-              現在は開発段階です。現場に合わせた試作・導入からご相談を承っています。
-              作業の写真や動画をお送りいただければ、できること・できないことを正直にお返しします。
+              現在は開発段階です。試してみたい作業があれば、写真や動画を添えてお知らせください。
+              できること・できないことを正直にお返しします。
             </p>
           </div>
 
           <Button asChild className="mt-7">
-            <Link href="#contact">現場の作業を相談する<ArrowRight aria-hidden="true" className="h-4 w-4" /></Link>
-          </Button>
-        </motion.article>
-
-        <motion.article initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }} transition={{ duration: 0.5 }}
-          className="mt-6 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
-          <p className="text-xs font-medium tracking-wider text-accent">開発予定 ─ センサー端末</p>
-          <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
-            「これを見張って」と、言葉で頼める見張り役。
-          </h3>
-          <p className="mt-5 max-w-3xl text-[15px] leading-loose text-foreground/80">
-            違う部品の混入、部品箱の空、古いアナログメーターの値。現場には、人が目で見回っている小さな見張りが数多くあります。
-            これまでのカメラ検査は、見張る対象ごとに画像を集めて調整する開発が必要で、品種の多い現場では割に合いませんでした。
-            私たちがこれから開発するのは、見張りたいことを日本語で伝えるだけで、カメラとAIが判断し、理由と写真を添えて人に知らせ、記録に残すセンサー端末です。
-            品種や見張る対象が変わっても、頼み方を変えるだけで使えることを目指します。
-          </p>
-          <p className="mt-5 max-w-3xl text-[13px] leading-relaxed text-muted-foreground">
-            現在は開発段階です。現場に合わせた試作・導入からご相談を承っています。
-            作業の写真や動画をお送りいただければ、できること・できないことを正直にお返しします。
-          </p>
-
-          <Button asChild className="mt-7">
-            <Link href="#contact">現場の作業を相談する<ArrowRight aria-hidden="true" className="h-4 w-4" /></Link>
+            <Link href="#contact">使い道を相談する<ArrowRight aria-hidden="true" className="h-4 w-4" /></Link>
           </Button>
         </motion.article>
 
