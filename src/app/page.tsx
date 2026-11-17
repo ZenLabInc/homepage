@@ -1,7 +1,7 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/sections/hero";
-import { News } from "@/components/sections/news";
+import { Updates } from "@/components/sections/updates";
 import { Services } from "@/components/sections/services";
 import { Company } from "@/components/sections/company";
 import { Representative } from "@/components/sections/representative";
@@ -13,10 +13,10 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
-        <News />
         <Services />
         <Company />
         <Representative />
+        <Updates />
         <Contact />
       </main>
       <SiteFooter />

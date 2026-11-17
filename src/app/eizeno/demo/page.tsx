@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
 import { DemoVideo } from "@/components/demo/demo-player";
-import { EXHIBITION_2026, exhibitionHeadline } from "@/lib/news";
+import { EXHIBITION_2026, exhibitionHeadline } from "@/lib/exhibition";
 
 const MEDIA = "/eizeno/demo";
 const DESCRIPTION = "SaaSのURLから、実際の操作画面を使った紹介動画を制作するEizeno。産業交流展2026に向けた、日本語・英語の作例と3つの映像テイストをご覧いただけます。";

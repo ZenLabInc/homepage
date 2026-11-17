@@ -18,3 +18,9 @@ export const SITE = {
   addressLine1: "東京都新宿区新宿2丁目8番15号",
   addressLine2: "パークフロント新宿 202号室",
 } as const;
+
+export const SOCIAL = [
+  { label: "X", handle: "@ZenLab0521", href: "https://x.com/ZenLab0521" },
+  { label: "YouTube", handle: "@ZenLabInc", href: "https://www.youtube.com/@ZenLabInc" },
+  { label: "Instagram", handle: "@zenlabinc", href: "https://www.instagram.com/zenlabinc/" },
+] as const;
