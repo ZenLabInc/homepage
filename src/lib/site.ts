@@ -7,7 +7,7 @@ export const SITE = {
   tagline: "AI×ロボットで、人ができることを広げる。",
   taglineEn: "AI and robots that expand what people can do.",
   description:
-    "ZenLab(株式会社ZenLab)は、AIとロボットを組み合わせ、学生や若い作り手がこれまでできなかったことをできるようにする道具を開発しています。いまは、言葉で頼むだけで手を貸してくれる、机の上のロボットアームを開発中です。",
+    "ZenLab(株式会社ZenLab)は、AIとロボットを組み合わせ、人や小さなチームがこれまでできなかったことをできるようにする道具を開発しています。いまは、言葉で頼むだけで手を貸してくれるロボットアームを開発中です。",
   contactPath: "/#contact",
   founded: "2026年5月",
   representative: "畑田 祐陽",

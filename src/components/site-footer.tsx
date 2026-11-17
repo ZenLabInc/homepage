@@ -33,7 +33,7 @@ export function SiteFooter() {
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
               {SITE.tagline}
               <br />
-              学生や若い作り手が、これまでできなかったことをできるようにする道具をつくっています。
+              これまでできなかったことを、できるようにする道具をつくっています。
             </p>
             <p className="text-xs text-muted-foreground/70">
               {SITE.legalName} · {SITE.nameJa}
