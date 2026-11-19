@@ -3,6 +3,8 @@ import type { IconType } from "react-icons";
 import { SiInstagram, SiX, SiYoutube } from "react-icons/si";
 import { SOCIAL } from "@/lib/site";
 import { SectionHeading } from "@/components/section-heading";
+import { YouTubeFacade } from "@/components/youtube-facade";
+import { fetchDevLogVideos } from "@/lib/youtube";
 
 /* 各サービスの公式の色。X は公式の文字色(純黒は使わない)。 */
 const ICONS: Record<(typeof SOCIAL)[number]["label"], { Icon: IconType; tile: string }> = {
@@ -14,14 +16,29 @@ const ICONS: Record<(typeof SOCIAL)[number]["label"], { Icon: IconType; tile: st
   },
 };
 
-export function Updates() {
+export async function Updates() {
+  const videos = await fetchDevLogVideos(3);
   return (
     <section id="updates" className="scroll-mt-16 relative py-16 md:py-20">
       <div className="container mx-auto max-w-5xl">
         <SectionHeading title="最新の状況" en="Updates" />
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-          開発の進み具合は、SNS で発信しています。
+          開発の進み具合は、毎週 SNS で発信しています。
         </p>
+
+        {videos.length > 0 && (
+          <ul className="mt-6 grid gap-4 sm:grid-cols-3">
+            {videos.map((v) => (
+              <li key={v.id}>
+                <YouTubeFacade id={v.id} title={v.title} />
+                <p className="mt-2 text-[13.5px] font-medium leading-snug text-foreground">{v.title}</p>
+                <p className="mt-0.5 font-mono text-[11.5px] text-muted-foreground">
+                  {new Date(v.published).toLocaleDateString("ja-JP", { timeZone: "Asia/Tokyo" })}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
         <ul className="mt-6 grid gap-3 sm:grid-cols-3">
           {SOCIAL.map((s) => {
             const { Icon, tile } = ICONS[s.label];
