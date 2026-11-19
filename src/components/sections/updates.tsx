@@ -27,7 +27,7 @@ export async function Updates() {
         </p>
 
         {videos.length > 0 && (
-          <ul className="mt-6 grid gap-4 sm:grid-cols-3">
+          <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {videos.map((v) => (
               <li key={v.id}>
                 <YouTubeFacade id={v.id} title={v.title} />

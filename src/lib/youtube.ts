@@ -1,6 +1,7 @@
 /* YouTube の公開フィード(API キー不要)から、開発記録の動画を読む。
    タイトルか説明に「#開発記録」が付いた動画だけを、新しい順に返す。
-   1 時間ごとに読み直すので、YouTube に投稿すればサイトにも自動で並ぶ。 */
+   ページを開くたびに読み直すので、YouTube に投稿すればサイトにも自動で並ぶ
+   (YouTube のフィード自体の反映に十数分かかることはある)。 */
 
 export const YOUTUBE_CHANNEL_ID = "UCT3Y4S8vM74xzNL6wQR1Zmg";
 export const DEV_LOG_TAG = "#開発記録";
@@ -28,8 +29,8 @@ function pick(block: string, tag: string) {
 export async function fetchDevLogVideos(limit = 3): Promise<DevLogVideo[]> {
   try {
     const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`, {
-      next: { revalidate: 3600 },
-      signal: AbortSignal.timeout(5000),
+      cache: "no-store",
+      signal: AbortSignal.timeout(3000),
     });
     if (!res.ok) return [];
     const xml = await res.text();
