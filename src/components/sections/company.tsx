@@ -14,9 +14,10 @@ const facts: { label: string; value: React.ReactNode }[] = [
       </>
     ),
   },
-  { label: "代表", value: SITE.representative },
-  { label: "事業内容", value: SITE.businessDescription },
+  { label: "代表者", value: `代表取締役 ${SITE.representative}` },
   { label: "設立", value: SITE.founded },
+  { label: "資本金", value: SITE.capital },
+  { label: "事業内容", value: SITE.businessDescription },
   {
     label: "所在地",
     value: (

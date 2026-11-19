@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { SITE } from "@/lib/site";
+import { SITE, SOCIAL } from "@/lib/site";
 import "./fonts.css";
 import "./globals.css";
 
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   creator: SITE.legalName,
   publisher: SITE.legalName,
   keywords: [
-    "ロボットアーム", "フィジカルAI", "AIエージェント", "ものづくり",
-    "メイカー", "試作", "AI", "ロボティクス", "ZenLab",
+    "zarm", "ロボットアーム", "Claude Code", "Codex", "MCP", "AIエージェント",
+    "電子工作", "ものづくり", "AI", "ロボティクス", "ZenLab",
   ],
   alternates: { canonical: SITE.url },
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
-    creator: "@zenlab_jp",
+    creator: "@ZenLab0521",
   },
   robots: {
     index: true,
@@ -56,7 +56,7 @@ const orgJsonLd = {
   url: SITE.url,
   logo: `${SITE.url}/icon.png`,
   description: SITE.description,
-  sameAs: [],
+  sameAs: SOCIAL.map((s) => s.href),
 };
 
 export default function RootLayout({

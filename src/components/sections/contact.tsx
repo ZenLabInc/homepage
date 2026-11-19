@@ -160,8 +160,8 @@ export function Contact() {
                   )}
 
                   <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between pt-2">
-                    <p className="text-[11.5px] text-muted-foreground/80">
-                      内容をご確認のうえ、送信してください。
+                    <p className="text-[11.5px] leading-relaxed text-muted-foreground/80">
+                      いただいたお名前・メールアドレス・内容は、お問い合わせへの返信と対応にだけ使い、法令に基づく場合を除いて第三者に提供しません。
                     </p>
                     <Button type="submit" size="lg" disabled={submitting}>
                       {submitting ? "送信中..." : "送信する"}

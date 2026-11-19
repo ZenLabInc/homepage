@@ -7,9 +7,10 @@ export const SITE = {
   tagline: "AI×ロボットで、人ができることを広げる。",
   taglineEn: "AI and robots that expand what people can do.",
   description:
-    "ZenLab(株式会社ZenLab)は、AIとロボットを組み合わせ、人や小さなチームがこれまでできなかったことをできるようにする道具を開発しています。いまは、言葉で頼むだけで手を貸してくれるロボットアームを開発中です。",
+    "ZenLab(株式会社ZenLab)は、学生や若い社会人が、これまでできなかったことをできるようになる道具を、AIとロボットでつくっています。いまは、Claude Code や Codex に机の上を見せる小さな腕「zarm」を開発中です。",
   contactPath: "/#contact",
-  founded: "2026年5月",
+  founded: "2026年5月21日",
+  capital: "100万円",
   representative: "畑田 祐陽",
   representativeKana: "はただ ゆうひ",
   representativeRomaji: "Yuhi Hatada",

@@ -5,15 +5,16 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const CONDITIONS = [
-  { title: "正確に掴める", body: "狙った物を、狙った所で掴んで運び、置く。" },
-  { title: "教えるのが簡単", body: "人にやり方を伝えるくらいの手間で覚える。プログラムや専門知識を要らなくする。" },
-  { title: "軽くて、安い", body: "1人で持ち運べ、作業台に置ける。個人や小さな現場でも手が届くことを目指す。" },
-  { title: "失敗を知らせる", body: "うまくいかなかったことを検知して、人に伝える。黙って失敗し続けない。" },
+const POINTS = [
+  { title: "自分で動いて見る", body: "エージェントが見たい所へカメラを動かす。部品の陰や横、ピンの番号まで寄って確かめる。" },
+  { title: "照らして撮る", body: "先端のライトで照らす。部屋の明るさに左右されずに撮れる。" },
+  { title: "つなぐだけで使える", body: "PC と USB-C 1本でつなぎ、MCP で Claude Code や Codex に追加する。" },
+  { title: "手に届く道具に", body: "手に入りやすい部品と 3D プリントでつくり、学生や個人でも手が届く値段を目指す。" },
 ];
 
 const TARGETS = [
-  "ものづくり・試作で、手がもう1本ほしい作業",
+  "Claude Code や Codex と、電子工作・ロボット・IoT など画面の外で動く物をつくっている人",
+  "配線や LED の様子を、エージェントに言葉で説明している人",
 ];
 
 export function Services() {
@@ -26,24 +27,24 @@ export function Services() {
           事業内容
         </motion.h2>
         <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-          言葉で頼めば手を貸してくれる、ロボットアームを開発しています。
+          新しく何かをつくる人の、机の上の相棒になるロボットを開発しています。
         </p>
 
         <motion.article initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.5 }}
           className="mt-10 rounded-3xl border border-accent/20 bg-accent/[0.03] p-8 sm:p-12">
-          <p className="text-xs font-medium tracking-wider text-accent">開発中 ─ ロボットアーム</p>
+          <p className="text-xs font-medium tracking-wider text-accent">開発中 ─ zarm</p>
           <h3 className="mt-4 text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
-            言葉で頼める、作業台の相棒。
+            Claude Code や Codex に、机の上を見せる腕。
           </h3>
           <p className="mt-5 max-w-3xl text-[15px] leading-loose text-foreground/80">
-            これまでロボットに作業をさせるには、プログラムや作業ごとの学習が必要で、個人や小さな現場が気軽に使える道具ではありませんでした。
-            私たちがつくっているのは、カメラで見て、言葉で指示され、「いや、そうじゃない」と直されながら作業を覚えるアームです。
-            頼み方を変えるだけで、いろいろな作業に使えることを目指しています。
+            AI エージェントと電子工作やロボットをつくるとき、配線や LED の様子は、いまも人が見て言葉で伝えています。
+            zarm は、先端にカメラとライトを付けた小さな腕です。エージェントが自分で見たい所へ動かし、照らし、撮って確かめます。
+            つくる人が、エージェントのために机の上を確かめなくて済むようにします。
           </p>
 
-          <ul aria-label="開発中のアームが満たすべき条件" className="mt-9 grid gap-4 sm:grid-cols-2">
-            {CONDITIONS.map((c) => (
+          <ul aria-label="zarm でできること" className="mt-9 grid gap-4 sm:grid-cols-2">
+            {POINTS.map((c) => (
               <li key={c.title} className="rounded-2xl border border-border bg-white p-5">
                 <p className="text-[15px] font-semibold tracking-tight text-foreground">{c.title}</p>
                 <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">{c.body}</p>
@@ -52,7 +53,7 @@ export function Services() {
           </ul>
 
           <div className="mt-9 rounded-2xl border border-border bg-white p-6 sm:p-7">
-            <p className="text-xs font-medium tracking-wider text-muted-foreground">一緒に試したい作業</p>
+            <p className="text-xs font-medium tracking-wider text-muted-foreground">使ってほしい人</p>
             <ul className="mt-3 space-y-2">
               {TARGETS.map((t) => (
                 <li key={t} className="flex gap-2.5 text-[14px] leading-relaxed text-foreground/85">
@@ -62,8 +63,8 @@ export function Services() {
               ))}
             </ul>
             <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">
-              現在は開発段階です。試してみたい作業があれば、写真や動画を添えてお知らせください。
-              できること・できないことを正直にお返しします。
+              現在は設計段階です。エージェントに机の上を見せたかった場面があれば、お知らせください。
+              見るだけでなく、持つ・渡すまで広げていく予定です。
             </p>
           </div>
 
