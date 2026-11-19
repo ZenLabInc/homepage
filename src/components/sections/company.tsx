@@ -3,6 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { SITE } from "@/lib/site";
+import { SectionHeading } from "@/components/section-heading";
 
 const facts: { label: string; value: React.ReactNode }[] = [
   {
@@ -36,23 +37,15 @@ export function Company() {
       id="company"
       className="relative py-24 md:py-32"
     >
-      <div className="container mx-auto max-w-3xl">
-        <motion.h2
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-          className="text-[clamp(1.75rem,3vw,2.25rem)] font-semibold tracking-tight text-foreground"
-        >
-          会社概要
-        </motion.h2>
+      <div className="container mx-auto max-w-5xl">
+        <SectionHeading title="会社概要" en="Company" />
 
         <motion.dl
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, delay: 0.06 }}
-          className="mt-10 divide-y divide-border rounded-2xl border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] overflow-hidden"
+          className="mt-10 divide-y divide-border rounded-xl border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] overflow-hidden"
         >
           {facts.map((f) => (
             <div

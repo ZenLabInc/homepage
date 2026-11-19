@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/#services", label: "事業内容" },
+  { href: "/#founder", label: "代表紹介" },
   { href: "/#company", label: "会社概要" },
   { href: "/#updates", label: "最新の状況" },
 ];
@@ -30,11 +31,11 @@ export function SiteHeader() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-border bg-white/85 backdrop-blur-xl shadow-[0_1px_2px_0_rgb(15_23_42/0.04)]"
+          ? "border-b border-border bg-white"
           : "border-b border-transparent"
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between">
+      <div className="container mx-auto max-w-5xl flex h-16 items-center justify-between">
         <Link
           href="/"
           aria-label="ZenLab home"
@@ -48,7 +49,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="px-3.5 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground rounded-full"
+              className="px-3.5 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground rounded-md"
             >
               {item.label}
             </Link>

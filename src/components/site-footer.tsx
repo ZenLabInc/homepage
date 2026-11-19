@@ -4,6 +4,7 @@ import { SITE } from "@/lib/site";
 
 const sections = [
   { href: "/#services", label: "事業内容" },
+  { href: "/#founder", label: "代表紹介" },
   { href: "/#company", label: "会社概要" },
   { href: "/#updates", label: "最新の状況" },
   { href: "/#contact", label: "お問い合わせ" },
@@ -25,7 +26,7 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
     <footer className="relative mt-32 bg-white">
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto max-w-5xl py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="space-y-5">
             <Link

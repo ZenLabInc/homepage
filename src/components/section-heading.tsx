@@ -1,64 +1,40 @@
 "use client";
 
-import * as React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
-interface SectionHeadingProps {
-  eyebrow?: string;
-  title: React.ReactNode;
-  description?: React.ReactNode;
-  align?: "left" | "center";
-  className?: string;
+/* 罫線。画面に入ったとき、左から一度だけ引かれる。 */
+export function Rule({ className = "bg-foreground", delay = 0 }: { className?: string; delay?: number }) {
+  return (
+    <motion.div
+      aria-hidden
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={`h-px w-full origin-left ${className}`}
+    />
+  );
 }
 
+/* 各セクションの見出し。上に濃い罫線、右に英字の小見出しを置く。 */
 export function SectionHeading({
-  eyebrow,
   title,
-  description,
-  align = "left",
-  className,
-}: SectionHeadingProps) {
+  en,
+}: {
+  title: string;
+  en: string;
+}) {
   return (
-    <div
-      className={cn(
-        "max-w-3xl",
-        align === "center" && "mx-auto text-center",
-        className
-      )}
-    >
-      {eyebrow && (
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground"
-        >
-          <span className="h-px w-6 bg-foreground/30" />
-          {eyebrow}
-        </motion.div>
-      )}
-      <motion.h2
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, delay: 0.05 }}
-        className="mt-4 text-[clamp(1.85rem,3.2vw,2.75rem)] font-semibold leading-[1.15] tracking-tight heading-gradient text-balance"
-      >
-        {title}
-      </motion.h2>
-      {description && (
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-5 text-[15px] leading-relaxed text-muted-foreground text-pretty max-w-2xl"
-        >
-          {description}
-        </motion.p>
-      )}
+    <div>
+      <Rule />
+      <div className="flex items-baseline gap-4 pt-5">
+        <h2 className="text-[clamp(1.5rem,2.6vw,2rem)] font-semibold tracking-tight text-foreground">
+          {title}
+        </h2>
+        <span className="ml-auto font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
+          {en}
+        </span>
+      </div>
     </div>
   );
 }

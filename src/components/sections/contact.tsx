@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { SectionHeading } from "@/components/section-heading";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -51,27 +52,16 @@ export function Contact() {
       className="relative py-24 md:py-32"
     >
 
-      <div className="container mx-auto">
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+      <div className="container mx-auto max-w-5xl">
+        <SectionHeading title="お問い合わせ" en="Contact" />
+        <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* Left: pitch */}
           <div>
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5 }}
-              className="text-xs uppercase tracking-[0.18em] text-muted-foreground"
-            >
-              <span className="inline-flex items-center gap-2">
-                <span className="h-px w-6 bg-foreground/30" />
-                お問い合わせ
-              </span>
-            </motion.div>
-            <h2 className="mt-4 text-[clamp(1.85rem,3.4vw,2.85rem)] font-semibold leading-[1.15] tracking-tight heading-gradient text-balance">
+            <h3 className="text-[clamp(1.4rem,2.4vw,1.9rem)] font-semibold leading-[1.3] tracking-tight text-foreground text-balance">
               ZenLabへのご相談、
               <br className="hidden sm:inline" />
               こちらから。
-            </h2>
+            </h3>
 
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted-foreground">
               AI を含むシステム開発・ディレクションのご相談、ロボットやハードウェアを含む開発のご相談、取材・協業、採用など、会社へのお問い合わせを受け付けています。
@@ -97,8 +87,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="absolute -inset-x-6 -inset-y-3 rounded-[28px] bg-accent/[0.05] blur-2xl -z-10" />
-            <div className="relative rounded-[20px] border border-border bg-white shadow-[0_1px_0_0_hsl(220_13%_95%)_inset,0_1px_2px_0_rgb(15_23_42/0.04),0_24px_48px_-28px_rgb(15_23_42/0.18)] p-7 md:p-9">
+            <div className="relative rounded-xl border border-border bg-white p-7 md:p-9">
               {submitted ? (
                 <SuccessState />
               ) : (

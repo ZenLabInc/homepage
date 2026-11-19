@@ -2,36 +2,41 @@ import { ArrowUpRight } from "lucide-react";
 import type { IconType } from "react-icons";
 import { SiInstagram, SiX, SiYoutube } from "react-icons/si";
 import { SOCIAL } from "@/lib/site";
+import { SectionHeading } from "@/components/section-heading";
 
-const ICONS: Record<(typeof SOCIAL)[number]["label"], IconType> = {
-  X: SiX,
-  YouTube: SiYoutube,
-  Instagram: SiInstagram,
+/* 各サービスの公式の色。X は公式の文字色(純黒は使わない)。 */
+const ICONS: Record<(typeof SOCIAL)[number]["label"], { Icon: IconType; tile: string }> = {
+  X: { Icon: SiX, tile: "bg-[#0f1419]" },
+  YouTube: { Icon: SiYoutube, tile: "bg-[#ff0000]" },
+  Instagram: {
+    Icon: SiInstagram,
+    tile: "bg-[linear-gradient(45deg,#feda75_0%,#fa7e1e_25%,#d62976_50%,#962fbf_75%,#4f5bd5_100%)]",
+  },
 };
 
 export function Updates() {
   return (
     <section id="updates" className="scroll-mt-16 relative py-16 md:py-20">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-[clamp(1.5rem,2.6vw,1.875rem)] font-semibold tracking-tight text-foreground">
-          最新の状況
-        </h2>
+        <SectionHeading title="最新の状況" en="Updates" />
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
           開発の進み具合は、SNS で発信しています。
         </p>
         <ul className="mt-6 grid gap-3 sm:grid-cols-3">
           {SOCIAL.map((s) => {
-            const Icon = ICONS[s.label];
+            const { Icon, tile } = ICONS[s.label];
             return (
             <li key={s.label}>
               <a
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-border bg-white px-5 py-4 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="group flex items-center justify-between rounded-xl border border-border bg-white px-5 py-4 hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <span className="flex items-center gap-3.5">
-                  <Icon aria-hidden="true" className="h-5 w-5 shrink-0 text-foreground group-hover:text-accent" />
+                  <span aria-hidden="true" className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${tile}`}>
+                    <Icon className="h-[18px] w-[18px] text-white" />
+                  </span>
                   <span>
                   <span className="block text-[15px] font-semibold tracking-tight text-foreground group-hover:text-accent">{s.label}</span>
                   <span className="block font-mono text-[13px] text-muted-foreground">{s.handle}</span>
