@@ -177,12 +177,20 @@ export function Services() {
                   <p className="text-[12px] text-muted-foreground">{b.status}</p>
                   <h3 className="mt-2 text-[20px] font-semibold leading-snug tracking-tight text-foreground text-balance [word-break:auto-phrase]">{b.title}</h3>
                   <p className="mt-4 text-[14.5px] leading-[1.85] text-foreground/80">{b.lead}</p>
-                  <Button asChild className="mt-7">
-                    <Link href="#contact">
-                      {b.cta}
-                      <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                  <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+                    <Button asChild>
+                      <Link href="#contact">
+                        {b.cta}
+                        <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <Link
+                      href="#process"
+                      className="text-[13.5px] font-medium text-foreground/70 underline-offset-4 hover:text-accent hover:underline"
+                    >
+                      ご依頼の流れを見る
                     </Link>
-                  </Button>
+                  </div>
                 </div>
 
                 {/* 右:項目の表 */}
