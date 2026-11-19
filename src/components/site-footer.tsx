@@ -5,7 +5,6 @@ import { SITE } from "@/lib/site";
 const sections = [
   { href: "/#services", label: "事業内容" },
   { href: "/#process", label: "ご依頼の流れ" },
-  { href: "/#founder", label: "代表紹介" },
   { href: "/#company", label: "会社概要" },
   { href: "/#updates", label: "最新の状況" },
   { href: "/#contact", label: "お問い合わせ" },

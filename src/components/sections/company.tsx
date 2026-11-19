@@ -4,6 +4,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { SITE } from "@/lib/site";
 import { SectionHeading } from "@/components/section-heading";
+import { Founder } from "@/components/sections/founder";
 
 const facts: { label: string; value: React.ReactNode }[] = [
   {
@@ -40,12 +41,13 @@ export function Company() {
       <div className="container mx-auto max-w-5xl">
         <SectionHeading title="会社概要" en="Company" />
 
+        <h3 className="mt-10 text-[17px] font-semibold tracking-tight text-foreground">会社情報</h3>
         <motion.dl
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, delay: 0.06 }}
-          className="mt-10 divide-y divide-border rounded-xl border border-border bg-white shadow-[0_1px_2px_0_rgb(15_23_42/0.04)] overflow-hidden"
+          className="mt-5 divide-y divide-border rounded-xl border border-border bg-white overflow-hidden"
         >
           {facts.map((f) => (
             <div
@@ -62,7 +64,9 @@ export function Company() {
           ))}
         </motion.dl>
 
-
+        <div className="mt-16">
+          <Founder />
+        </div>
       </div>
     </section>
   );

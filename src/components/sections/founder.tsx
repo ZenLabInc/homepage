@@ -3,10 +3,10 @@
 import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { SectionHeading, Rule } from "@/components/section-heading";
+import { Rule } from "@/components/section-heading";
 import { SITE } from "@/lib/site";
 
-/* 代表紹介。写真と名前を左に、想い・大切にしていること・経歴を右に並べる。
+/* 代表紹介(会社概要の中に置く)。写真と名前を左に、想い・大切にしていること・経歴を右に並べる。
    経歴は会社名を出さない(代表の指示)。 */
 
 const VALUES = [
@@ -45,16 +45,15 @@ function Block({ label, children, delay = 0 }: { label: string; children: React.
 
 export function Founder() {
   return (
-    <section id="founder" className="scroll-mt-16 relative py-24 md:py-32">
-      <div className="container mx-auto max-w-5xl">
-        <SectionHeading title="代表紹介" en="Founder" />
+    <div id="founder" className="scroll-mt-24">
+      <h3 className="text-[17px] font-semibold tracking-tight text-foreground">代表紹介</h3>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="mt-12 rounded-xl border border-border bg-white p-7 sm:p-10"
+          className="mt-5 rounded-xl border border-border bg-white p-7 sm:p-10"
         >
           <div className="grid gap-10 md:grid-cols-[220px_1fr] md:gap-12">
             {/* 写真と名前 */}
@@ -114,7 +113,6 @@ export function Founder() {
             </div>
           </div>
         </motion.div>
-      </div>
-    </section>
+    </div>
   );
 }

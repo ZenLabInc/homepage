@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/hero";
 import { Updates } from "@/components/sections/updates";
 import { Services } from "@/components/sections/services";
 import { Company } from "@/components/sections/company";
-import { Founder } from "@/components/sections/founder";
 import { Process } from "@/components/sections/process";
 import { Contact } from "@/components/sections/contact";
 import { PageDrawings } from "@/components/page-drawings";
@@ -18,7 +17,6 @@ export default function HomePage() {
         <Hero />
         <Services />
         <Process />
-        <Founder />
         <Company />
         <Updates />
         <Contact />
