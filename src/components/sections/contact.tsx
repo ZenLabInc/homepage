@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Check } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -47,10 +48,8 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="section-edge py-24 md:py-32 border-t border-border bg-muted/60"
+      className="relative py-24 md:py-32"
     >
-      <div className="absolute inset-0 -z-10 grid-bg-fine grid-mask-radial opacity-30" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-[420px] bg-gradient-to-b from-accent/[0.06] to-transparent blur-3xl" />
 
       <div className="container mx-auto">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
@@ -75,7 +74,7 @@ export function Contact() {
             </h2>
 
             <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted-foreground">
-              商品・道具についてのご質問、システム受託開発のご相談、採用、取材・協業、YouTubeに関するご連絡など、会社に関するお問い合わせを受け付けています。
+              AI を含むシステム開発・ディレクションのご相談、ロボットやハードウェアを含む開発のご相談、取材・協業、採用など、会社へのお問い合わせを受け付けています。
               個人の方も、お気軽にご連絡ください。
             </p>
 
@@ -137,7 +136,7 @@ export function Contact() {
                       name="message"
                       maxLength={5000}
                       required
-                      placeholder="商品・道具、採用、YouTube、開発のご相談など、ご用件をお書きください"
+                      placeholder="システム開発・ディレクション、ロボット開発、取材・協業など、ご用件をお書きください"
                     />
                   </Field>
 
@@ -161,7 +160,7 @@ export function Contact() {
 
                   <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between pt-2">
                     <p className="text-[11.5px] leading-relaxed text-muted-foreground/80">
-                      いただいたお名前・メールアドレス・内容は、お問い合わせへの返信と対応にだけ使い、法令に基づく場合を除いて第三者に提供しません。
+                      いただいたお名前・メールアドレス・内容は、お問い合わせへの返信と対応にだけ使い、法令に基づく場合を除いて第三者に提供しません。詳しくは<Link href="/privacy" className="text-accent hover:underline">個人情報保護方針</Link>をご覧ください。
                     </p>
                     <Button type="submit" size="lg" disabled={submitting}>
                       {submitting ? "送信中..." : "送信する"}

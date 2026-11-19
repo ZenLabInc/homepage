@@ -9,6 +9,12 @@ const sections = [
   { href: "/#contact", label: "お問い合わせ" },
 ];
 
+const policies = [
+  { href: "/privacy", label: "個人情報保護方針" },
+  { href: "/security-policy", label: "情報セキュリティ基本方針" },
+  { href: "/antisocial-forces-policy", label: "反社会的勢力に対する基本方針" },
+];
+
 const company = [
   { label: "社名", value: SITE.nameJa },
   { label: "代表", value: SITE.representative },
@@ -18,8 +24,7 @@ const company = [
 export function SiteFooter() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative border-t border-border mt-32 bg-muted/40">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    <footer className="relative mt-32 bg-white">
       <div className="container mx-auto py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div className="space-y-5">
@@ -33,7 +38,7 @@ export function SiteFooter() {
             <p className="text-sm leading-relaxed text-muted-foreground max-w-sm">
               {SITE.tagline}
               <br />
-              これまでできなかったことを、できるようにする道具をつくっています。
+              AI を含むシステムの受託開発・ディレクションと、フィジカル AI(ロボット)の開発をしています。
             </p>
             <p className="text-xs text-muted-foreground/70">
               {SITE.legalName} · {SITE.nameJa}
@@ -92,7 +97,18 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-border flex flex-col gap-3 sm:flex-row items-start sm:items-center justify-between text-xs text-muted-foreground/80">
-          <p>© {year} {SITE.legalName} All rights reserved.</p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+            <p>© {year} {SITE.legalName} All rights reserved.</p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {policies.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-foreground transition-colors">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           <p className="font-mono tracking-tight">
             <span className="text-foreground/60">{SITE.domain}</span>
           </p>

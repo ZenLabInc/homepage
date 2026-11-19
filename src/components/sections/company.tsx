@@ -34,7 +34,7 @@ export function Company() {
   return (
     <section
       id="company"
-      className="section-edge py-24 md:py-32 border-t border-border"
+      className="relative py-24 md:py-32"
     >
       <div className="container mx-auto max-w-3xl">
         <motion.h2

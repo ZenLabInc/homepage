@@ -5,10 +5,12 @@ import { Updates } from "@/components/sections/updates";
 import { Services } from "@/components/sections/services";
 import { Company } from "@/components/sections/company";
 import { Contact } from "@/components/sections/contact";
+import { PageDrawings } from "@/components/page-drawings";
 
 export default function HomePage() {
   return (
     <div className="relative">
+      <PageDrawings />
       <SiteHeader />
       <main>
         <Hero />

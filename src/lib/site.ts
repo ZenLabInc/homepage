@@ -4,10 +4,10 @@ export const SITE = {
   nameJa: "株式会社ZenLab",
   url: "https://zenlab.co.jp",
   domain: "zenlab.co.jp",
-  tagline: "AI×ロボットで、人ができることを広げる。",
-  taglineEn: "AI and robots that expand what people can do.",
+  tagline: "AIを含むソフトウェアからハードウェアまで。",
+  taglineEn: "From AI software to hardware, end to end.",
   description:
-    "ZenLab(株式会社ZenLab)は、学生や若い社会人が、これまでできなかったことをできるようになる道具を、AIとロボットでつくっています。いまは、Claude Code や Codex に机の上を見せる小さな腕「zarm」を開発中です。",
+    "ZenLab(株式会社ZenLab)は、AI を含むソフトウェアからハードウェアまで、企画・開発・運用を一貫して行う会社です。AI を含むシステムの受託開発・ディレクションと、フィジカル AI(ロボット)の開発をしています。",
   contactPath: "/#contact",
   founded: "2026年5月21日",
   capital: "100万円",

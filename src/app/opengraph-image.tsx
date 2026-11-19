@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { LOGO_LOWER_PATH, LOGO_UPPER_PATH } from "@/lib/brand";
 
 export const runtime = "edge";
-export const alt = "ZenLab — AI×ロボットで、人ができることを広げる。";
+export const alt = "ZenLab — AIを含むソフトウェアからハードウェアまで。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

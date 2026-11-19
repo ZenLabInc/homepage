@@ -11,7 +11,7 @@ const ICONS: Record<(typeof SOCIAL)[number]["label"], IconType> = {
 
 export function Updates() {
   return (
-    <section id="updates" className="scroll-mt-16 section-edge py-16 md:py-20 border-t border-border">
+    <section id="updates" className="scroll-mt-16 relative py-16 md:py-20">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-[clamp(1.5rem,2.6vw,1.875rem)] font-semibold tracking-tight text-foreground">
           最新の状況
