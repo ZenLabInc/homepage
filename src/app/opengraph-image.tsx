@@ -1,12 +1,24 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { LOGO_LOWER_PATH, LOGO_UPPER_PATH } from "@/lib/brand";
 
-export const runtime = "edge";
-export const alt = "ZenLab — AIを含むソフトウェアからハードウェアまで。";
+/* リンクを共有したときに出る画像。トップの見出し(hero.tsx)と同じ言葉にする。
+   フォントは使う文字だけを抜いた Noto Sans JP(assets/og/)。文言を変えたら抜き直す。 */
+export const alt = "ZenLab — AIを含むソフトウェアからハードウェアまで、企画・開発・運用を一貫して行います。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+const INDIGO = "#4f46e5";
+const SLATE = "#0f172a";
+
 export default async function OG() {
+  const dir = join(process.cwd(), "assets/og");
+  const [regular, bold] = await Promise.all([
+    readFile(join(dir, "NotoSansJP-400.ttf")),
+    readFile(join(dir, "NotoSansJP-700.ttf")),
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -14,146 +26,82 @@ export default async function OG() {
           width: "100%",
           height: "100%",
           background: "#ffffff",
-          color: "#0f172a",
+          color: SLATE,
           display: "flex",
           flexDirection: "column",
-          padding: 80,
+          padding: "72px 88px",
           position: "relative",
-          fontFamily: "Inter, system-ui, sans-serif",
+          fontFamily: "Noto Sans JP",
         }}
       >
-        {/* Subtle grid */}
+        {/* 細かい方眼(サイトの背景と同じ) */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(to right, rgba(15,23,42,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.05) 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-            display: "flex",
-          }}
-        />
-        {/* Soft indigo glow */}
-        <div
-          style={{
-            position: "absolute",
-            top: -260,
-            left: 200,
-            width: 900,
-            height: 900,
-            background:
-              "radial-gradient(circle, rgba(79,70,229,0.10) 0%, transparent 60%)",
-            display: "flex",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -280,
-            right: -120,
-            width: 700,
-            height: 700,
-            background:
-              "radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 65%)",
+              "linear-gradient(to right, rgba(15,23,42,0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.045) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
             display: "flex",
           }}
         />
 
-        {/* Top row: brand mark + name */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 16,
-            zIndex: 1,
-          }}
-        >
-          <div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: 12,
-              background: "#ffffff",
-              border: "1px solid #e5e7eb",
-              boxShadow: "0 1px 2px rgba(15,23,42,0.04)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <svg viewBox="0 0 112 112" width={40} height={40}>
-              <path fill="#0f172a" d={LOGO_LOWER_PATH} />
-              <path fill="#4f46e5" d={LOGO_UPPER_PATH} />
-            </svg>
-          </div>
-          <div
-            style={{
-              fontSize: 30,
-              fontWeight: 600,
-              letterSpacing: -0.5,
-              color: "#0f172a",
-              display: "flex",
-            }}
-          >
-            ZenLab
-          </div>
+        {/* ロゴと社名 */}
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <svg viewBox="0 0 112 112" width={44} height={44}>
+            <path fill={SLATE} d={LOGO_LOWER_PATH} />
+            <path fill={INDIGO} d={LOGO_UPPER_PATH} />
+          </svg>
+          <div style={{ fontSize: 30, fontWeight: 700, display: "flex" }}>ZenLab</div>
         </div>
 
-        {/* Tagline */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "auto",
-            zIndex: 1,
-          }}
-        >
+        {/* 見出し */}
+        <div style={{ display: "flex", flexDirection: "column", marginTop: "auto" }}>
           <div
             style={{
-              fontSize: 86,
+              fontSize: 56,
               fontWeight: 700,
-              letterSpacing: -3,
-              lineHeight: 1.05,
-              color: "#0f172a",
+              lineHeight: 1.36,
+              letterSpacing: -1.5,
               display: "flex",
               flexDirection: "column",
             }}
           >
-            <div style={{ display: "flex" }}>Robot arms</div>
-            <div style={{ display: "flex" }}>you can teach.</div>
+            <div style={{ display: "flex" }}>
+              <span style={{ color: INDIGO }}>AI</span>
+              <span>を含むソフトウェアから</span>
+            </div>
+            <div style={{ display: "flex" }}>ハードウェアまで、</div>
+            <div style={{ display: "flex" }}>企画・開発・運用を一貫して行います。</div>
           </div>
+
+          <div style={{ width: 72, height: 4, background: INDIGO, marginTop: 36, display: "flex" }} />
+
           <div
             style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginTop: 22,
               fontSize: 24,
               fontWeight: 400,
               color: "#475569",
-              marginTop: 26,
-              display: "flex",
-              gap: 14,
-              alignItems: "center",
             }}
           >
-            <span>Robotics Studio</span>
-            <span style={{ opacity: 0.4 }}>·</span>
-            <span>Automation for Small-Batch Work</span>
+            <div style={{ display: "flex" }}>
+              AIを含むシステムの受託開発 / フィジカルAI(ロボット)の開発
+            </div>
+            <div style={{ display: "flex", fontSize: 22, color: "#64748b" }}>zenlab.co.jp</div>
           </div>
-        </div>
-
-        <div
-          style={{
-            position: "absolute",
-            bottom: 56,
-            right: 80,
-            fontSize: 20,
-            color: "#64748b",
-            display: "flex",
-            zIndex: 1,
-          }}
-        >
-          zenlab.co.jp
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        { name: "Noto Sans JP", data: regular, weight: 400, style: "normal" },
+        { name: "Noto Sans JP", data: bold, weight: 700, style: "normal" },
+      ],
+    }
   );
 }
