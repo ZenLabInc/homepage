@@ -12,9 +12,9 @@ import { InterestForm } from "@/components/zarm/interest-form";
    開発中の製品なので、決まっていないこと(届ける時期、2 本目の腕の値段)は「未定」と書く。
    性能の数字は、実機で測るまで載せない。 */
 
-const TITLE = "zarm-v3 — コーディングエージェントの目と手になる、机の上の腕";
+const TITLE = "zarm-v3 — コーディングエージェントに目と手を与える、机の上の腕";
 const DESCRIPTION =
-  "zarm-v3 は、Claude Code などのコーディングエージェントにつないで使う、机の上の小さなロボットアームです(開発中)。ライト・カメラ・細い爪先で、基板を見て、照らして、押して確かめます。片腕 約 5 万円(予定)。";
+  "zarm-v3 は、コーディングエージェントに目と手を与える机の上の小さなロボットアームです(開発中)。PC に USB でつなぎ、Claude Code などのエージェントで MCP を初期設定すると、エージェントが机の上の物を動かし、撮影できるようになります。片腕 約 5 万円(予定)。";
 
 export const metadata: Metadata = {
   title: "zarm-v3(開発中)",
@@ -30,9 +30,9 @@ const PARTS = [
 ];
 
 const STEPS = [
-  { no: "1", title: "PC につなぐ", body: "PC とは USB-C ケーブル 1 本でつなぎます(電源の取り方は設計中です)。" },
-  { no: "2", title: "エージェントから呼び出す", body: "Claude Code・Codex など、お使いのコーディングエージェントから腕を使えるようにします。" },
-  { no: "3", title: "言葉で頼む", body: "「基板のボタンを押して、LED が点くか確かめて」のように頼むと、腕が動いて確かめます。" },
+  { no: "1", title: "PC に USB でつなぐ", body: "腕と PC を USB-C ケーブル 1 本でつなぎます(電源の取り方は設計中です)。" },
+  { no: "2", title: "エージェントで MCP を初期設定", body: "Claude Code・Codex など、お使いのコーディングエージェントに、腕の MCP サーバーの設定を任せます。" },
+  { no: "3", title: "エージェントが机の上の物を動かし、撮影する", body: "設定が済むと、エージェントが自分で腕を使い、机の上の物を押す・つまむ・撮影するようになります。" },
 ];
 
 const ONE_ARM = ["机の上の物を撮影する・照らす", "基板や機器のボタン・スイッチを押す", "スマホやタブレットの画面をタップ・スワイプする", "電源を入れ直す、リセットボタンを押す", "小さな部品(抵抗・LED・ねじ)をつまんで並べる"];
@@ -63,14 +63,13 @@ export default function ZarmPage() {
               <Badge dot>開発中</Badge>
               <p className="mt-6 font-mono text-[12px] uppercase tracking-[0.18em] text-muted-foreground">zarm-v3</p>
               <h1 className="mt-3 text-[clamp(1.6rem,3.8vw,2.9rem)] font-semibold leading-[1.28] tracking-[-0.02em] text-foreground">
-                <span className="inline-block">コーディングエージェントの</span>
+                <span className="inline-block">コーディングエージェントに、</span>
                 <span className="inline-block">
-                  <span className="text-accent">目と手</span>になる、
+                  <span className="text-accent">目と手</span>を。
                 </span>
-                <span className="inline-block">机の上の小さな腕。</span>
               </h1>
               <p className="mt-6 max-w-xl text-[15.5px] leading-[1.9] text-foreground/80">
-                Claude Code などのコーディングエージェントにつなぐと、エージェントが机の上の基板を見て、照らして、押して、確かめます。作った物を確かめるために、人が机に戻らなくて済むようにする道具です。
+                PC に USB でつなぎ、Claude Code などのコーディングエージェントで腕の MCP を初期設定するだけ。エージェントが机の上の物を動かし、撮影できるようになります。
               </p>
               <dl className="mt-8 grid max-w-xl grid-cols-2 gap-6 border-t border-border pt-6">
                 <div>
@@ -98,7 +97,7 @@ export default function ZarmPage() {
             <figure className="mx-auto w-full max-w-[320px]">
               <video
                 className="aspect-[9/16] w-full rounded-2xl border border-border bg-muted object-cover"
-                src="/zarm/zarm-v3-concept.mp4"
+                src="/zarm/zarm-v3-concept.mp4?v=3"
                 poster="/zarm/zarm-v3-concept-poster.jpg"
                 controls
                 muted
@@ -133,7 +132,7 @@ export default function ZarmPage() {
         {/* 使い方 */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto max-w-5xl">
-            <SectionHeading title="使い方は、つなぐだけ" en="How to use" />
+            <SectionHeading title="USB でつないで、MCP を設定するだけ" en="Setup" />
             <ol className="mt-10 grid gap-8 md:grid-cols-3">
               {STEPS.map((s) => (
                 <li key={s.no} className="border-t border-border pt-5">
@@ -144,7 +143,9 @@ export default function ZarmPage() {
               ))}
             </ol>
             <div className="mt-10 rounded-xl bg-foreground px-6 py-5 font-mono text-[13.5px] leading-[1.9] text-white">
-              <span className="text-white/50">&gt; </span>基板のボタンを押して、LED が点くか確かめて
+              <span className="text-white/50">&gt; </span>zarm の MCP を設定して
+              <br />
+              <span className="text-white/50">&gt; </span>基板のボタンを押して、LED が点くところを撮影して
             </div>
           </div>
         </section>
