@@ -5,13 +5,10 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
-      // X 広告のリンク先が「?」抜けの /zarmutm_source=x_ad_b になっていたため、
-      // 計測用のパラメーターを残したまま /zarm へ送る
-      {
-        source: "/zarmutm_source=:src",
-        destination: "/zarm?utm_source=:src",
-        permanent: false,
-      },
+      // zarm-v3 の紹介ページは 2026-11-27 に外した。
+      // 広告や投稿に残っているリンク(「?」抜けの /zarmutm_source=… を含む)はトップへ送る
+      { source: "/zarm", destination: "/", permanent: false },
+      { source: "/zarmutm_source=:src", destination: "/", permanent: false },
     ];
   },
 };
